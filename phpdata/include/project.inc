@@ -1,6 +1,6 @@
 <?php
 
-function db_con()
+function db_con()  //수정수정
 {
 	$host = "localhost";
 	$user = "root";
