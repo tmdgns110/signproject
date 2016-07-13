@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hey</string>
+    <string name="Photo">Photo</string>
+    <string name="Pad">Pad</string>
+    <string name="Map">Map</string>
+    <string name="Exit">Exit</string>
+    <string name="Error">Error</string>
+    <string name="Empty"> </string>
+</resources>
