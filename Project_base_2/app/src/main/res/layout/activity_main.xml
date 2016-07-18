@@ -227,6 +227,13 @@
     android:layout_gravity="center"
     android:background="#eee"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="LOGIN" />
 
 
 </LinearLayout>

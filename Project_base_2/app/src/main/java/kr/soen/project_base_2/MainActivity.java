@@ -152,4 +152,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 
 
-    }}}
+    }}
+
+    public void LOGIN(View view) {
+        Intent intent = new Intent(this,LoginActivity.class);
+        startActivity(intent);
+    }
+}
