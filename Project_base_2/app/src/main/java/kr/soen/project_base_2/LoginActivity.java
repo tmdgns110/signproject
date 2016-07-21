@@ -30,5 +30,10 @@ public class LoginActivity extends AppCompatActivity {
     public void BACK(View view) {
         finish();
     }
+
+    public void Register(View view) {
+        Intent intent = new Intent(this,RegisterActivity.class);
+        startActivity(intent);
+    }
 }
 

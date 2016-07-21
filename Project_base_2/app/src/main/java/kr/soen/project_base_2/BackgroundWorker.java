@@ -5,6 +5,7 @@ package kr.soen.project_base_2;
  */
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.icu.util.Output;
 import android.os.AsyncTask;
 
@@ -19,6 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Objects;
 
 /**
  * Created by 김승훈 on 2016-07-18.
@@ -80,6 +82,11 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     protected void onPostExecute(String result) {
         alertDialog.setMessage(result);
         alertDialog.show();
+        if(Objects.equals(result, "login success !!!!! Welcome user")) {
+            Intent intent = new Intent(context, MainActivity.class);
+            context.startActivity(intent);
+        }
+
     }
 
     @Override
