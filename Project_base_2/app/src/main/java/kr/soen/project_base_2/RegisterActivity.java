@@ -1,18 +1,144 @@
 package kr.soen.project_base_2;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
-
+    EditText RUsernameEt, RPasswordEt, RPasswordEtConf, RStoreEt, RBranchEt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        RUsernameEt = (EditText)findViewById(R.id.RetUserName);
+        RPasswordEt = (EditText)findViewById(R.id.RetPassword);
+        RPasswordEtConf = (EditText)findViewById(R.id.RetPasswordConf);
+        RStoreEt = (EditText)findViewById(R.id.RetStore);
+        RBranchEt = (EditText)findViewById(R.id.RetBranch);
+
+
+
+        RPasswordEtConf.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int count, int after) {
+                String password = RPasswordEt.getText().toString();
+                String confirm = RPasswordEtConf.getText().toString();
+
+                if(password.equals(confirm)){
+                    RPasswordEt.setBackgroundColor(Color.GREEN);
+                    RPasswordEtConf.setBackgroundColor(Color.GREEN);
+                }
+                else {
+                    RPasswordEt.setBackgroundColor(Color.RED);
+                    RPasswordEtConf.setBackgroundColor(Color.RED);
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
     }
+
 
     public void LBACK(View view) {
         finish();
     }
+
+    public void OnCheck(View view) {
+        String username = RUsernameEt.getText().toString();
+        String type = "check";
+        if(username.length()!=0) {
+            RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
+            rbackgroundWorker.execute(type, username);
+        }
+        else{
+            Toast.makeText(RegisterActivity.this,"Email을 입력하세요", Toast.LENGTH_SHORT).show();
+            RUsernameEt.requestFocus();
+            return;
+
+        }
+
+
+    }
+
+
+    public void CStore(View view) {
+        String store = RStoreEt.getText().toString();
+        String type = "check1";
+        if(store.length()!=0) {
+            RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
+            rbackgroundWorker.execute(type, store);
+        }
+        else{
+            Toast.makeText(RegisterActivity.this,"가게명을 입력하세요", Toast.LENGTH_SHORT).show();
+            RStoreEt.requestFocus();
+            return;
+
+        }
+
+    }
+
+    public void CBranch(View view) {
+        String branch = RBranchEt.getText().toString();
+        String type = "check2";
+        if(branch.length()!=0) {
+            RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
+            rbackgroundWorker.execute(type, branch);
+        }
+        else{
+            Toast.makeText(RegisterActivity.this,"점포명을 입력하세요", Toast.LENGTH_SHORT).show();
+            RBranchEt.requestFocus();
+            return;
+
+        }
+    }
+
+
+
+
+    public void REGISTER(View view) {
+        if(RUsernameEt.getText().toString().length()==0){
+            Toast.makeText(RegisterActivity.this,"Email을 입력하세요", Toast.LENGTH_SHORT).show();
+            RUsernameEt.requestFocus();
+            return;
+        }
+
+        if(RPasswordEt.getText().toString().length()==0){
+            Toast.makeText(RegisterActivity.this,"비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
+            RPasswordEt.requestFocus();
+            return;
+        }
+
+        if(RPasswordEtConf.getText().toString().length()==0){
+            Toast.makeText(RegisterActivity.this,"비밀번호 확인을 입력하세요", Toast.LENGTH_SHORT).show();
+            RPasswordEtConf.requestFocus();
+            return;
+        }
+
+        if( !RPasswordEt.getText().toString().equals(RPasswordEtConf.getText().toString())){
+            Toast.makeText(RegisterActivity.this, "비밀번호가 일치하지 않습니다!", Toast.LENGTH_SHORT).show();
+            RPasswordEt.setText("");
+            RPasswordEtConf.setText("");
+            RPasswordEt.requestFocus();
+            return;
+        }
+    }
+
+
+
+
 }
