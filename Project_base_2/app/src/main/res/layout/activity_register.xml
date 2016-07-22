@@ -90,16 +90,7 @@
         android:layout_centerHorizontal="true"
         android:onClick="REGISTER" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CHECK"
-        android:id="@+id/CStore"
-        android:layout_below="@+id/RetPasswordConf"
-        android:layout_toEndOf="@+id/RetPasswordConf"
-        android:layout_above="@+id/RetBranch"
-        android:onClick="CStore" />
+
 
     <Button
         style="?android:attr/buttonStyleSmall"

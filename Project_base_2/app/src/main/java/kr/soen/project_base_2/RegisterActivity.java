@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText RUsernameEt, RPasswordEt, RPasswordEtConf, RStoreEt, RBranchEt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void OnCheck(View view) {
         String username = RUsernameEt.getText().toString();
         String type = "check";
-        if(username.length()!=0) {
+        if(username.length()!=0 && username!="Email") {
             RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
             rbackgroundWorker.execute(type, username);
         }
@@ -75,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
+/*
     public void CStore(View view) {
         String store = RStoreEt.getText().toString();
         String type = "check1";
@@ -91,13 +92,14 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
     }
-
+*/
     public void CBranch(View view) {
+        String store = RStoreEt.getText().toString();
         String branch = RBranchEt.getText().toString();
         String type = "check2";
-        if(branch.length()!=0) {
+        if((store.length()!=0) && (branch.length()!=0) && (store!="STORE") && (branch!="BRANCH")) {
             RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
-            rbackgroundWorker.execute(type, branch);
+            rbackgroundWorker.execute(type, store,branch);
         }
         else{
             Toast.makeText(RegisterActivity.this,"점포명을 입력하세요", Toast.LENGTH_SHORT).show();
@@ -111,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     public void REGISTER(View view) {
-        if(RUsernameEt.getText().toString().length()==0){
+        if((RUsernameEt.getText().toString().length()==0) && (RUsernameEt.getText().toString() !="Email")){
             Toast.makeText(RegisterActivity.this,"Email을 입력하세요", Toast.LENGTH_SHORT).show();
             RUsernameEt.requestFocus();
             return;
@@ -136,6 +138,32 @@ public class RegisterActivity extends AppCompatActivity {
             RPasswordEt.requestFocus();
             return;
         }
+
+        if ((RStoreEt.getText().toString().length() == 0) && (RStoreEt.getText().toString() != "STORE")) {
+            Toast.makeText(RegisterActivity.this, "가게명을 입력하세요", Toast.LENGTH_SHORT).show();
+            RStoreEt.requestFocus();
+            return;
+        }
+
+        if ((RBranchEt.getText().toString().length() == 0) && (RBranchEt.getText().toString() !="BRANCH")) {
+            Toast.makeText(RegisterActivity.this, "지점을 입력하세요", Toast.LENGTH_SHORT).show();
+            RBranchEt.requestFocus();
+            return;
+        }
+
+        if((RUsernameEt.getText().toString().length()!=0) && (RPasswordEt.getText().toString().length()!=0) && (RPasswordEtConf.getText().toString().length()!=0)
+                && ( RPasswordEt.getText().toString().equals(RPasswordEtConf.getText().toString())) && (RStoreEt.getText().toString().length() != 0)
+                && (RBranchEt.getText().toString().length() != 0) && (RUsernameEt.getText().toString() !="Email") && (RStoreEt.getText().toString() != "STORE")
+                && (RBranchEt.getText().toString() !="BRANCH")) {
+            String username = RUsernameEt.getText().toString();
+            String password = RPasswordEt.getText().toString();
+            String store = RStoreEt.getText().toString();
+            String branch = RBranchEt.getText().toString();
+            String type = "register";
+            RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
+            rbackgroundWorker.execute(type, username, password, store, branch);
+        }
+
     }
 
 
