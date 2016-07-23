@@ -27,7 +27,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private static final int CROP_FROM_CAMERA =1;
 
     private Uri mImageCaptureUri;
-    private ImageView mPhotoImageView;
+//    private ImageView mPhotoImageView;
     private ImageButton mButton;
     private ImageButton eButton;
 
@@ -42,7 +42,7 @@ public class MainActivity extends Activity implements OnClickListener {
         mButton = (ImageButton)findViewById(R.id.Photo);
         eButton = (ImageButton)findViewById(R.id.Exit);
 
-        mPhotoImageView = (ImageView)findViewById(R.id.image);
+//        mPhotoImageView = (ImageView)findViewById(R.id.image);
 
 
         mButton.setOnClickListener(this);
@@ -82,7 +82,17 @@ public class MainActivity extends Activity implements OnClickListener {
                 if(extras != null)
                 {
                     Bitmap photo = extras.getParcelable("data");
-                    mPhotoImageView.setImageBitmap(photo);
+//                    mPhotoImageView.setImageBitmap(photo);
+
+                    Intent intent = new Intent(getBaseContext(),After_crop.class);
+
+                    intent.putExtra("photo",photo);
+
+
+
+
+                    startActivity(intent);
+                    break;
                 }
 
                 File f =new File(mImageCaptureUri.getPath());
