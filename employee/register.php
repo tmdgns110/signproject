@@ -1,31 +1,30 @@
 <?php 
-require "conn.php";
-$user_name = $_POST["user_name"];
-$user_pass = $_POST["password"];
+require "../lib.php";
+$username = $_POST["username"];
+$password = $_POST["password"];
 $store = $_POST["store"];
 $branch = $_POST["branch"];
 
+$query = "select * from employee where username like '$username'";
+$result = mysql_query($query,$conn);
+$query2 =  "select * from employee where store like '$store' and branch like '$branch'";
+$result2 = mysql_query($query2,$conn);
 
-$mysql_qry = "select * from employee_data where username like '$user_name';";
-$result = mysqli_query($conn ,$mysql_qry);
-$mysql_qry1 =  "select * from employee_data where store like '$store' and branch like '$branch';";
-$result1 = mysqli_query($conn , $mysql_qry1);
-
-if(mysqli_num_rows($result) > 0) {
+if(mysql_num_rows($result) > 0) {
 echo "it is existed check username!";
 exit;
 }
-else if(mysqli_num_rows($result1) > 0) {
+else if(mysql_num_rows($result2) > 0) {
 echo "it is existed check store and branch!";
 exit;
 }
 else{
-$mysql_qry2 = "insert into employee_data (username,password,store,branch) values ('$user_name','$user_pass','$store','$branch');";
-$result2 = mysqli_query($conn ,$mysql_qry2);
+$query3 = "insert into employee(username,password,store,branch,email,hp) values ('$username','$password','$store','$branch','email','hp');";
+$result3 = mysql_query($query3,$conn);
 
 //$result = mysqli_query($conn,"insert into employee_data (username,password,store,branch) values ('$user_name','$user_pass','$store','$branch')");
 
-if($result2){
+if($result3){
 echo 'success';
 }
 else{

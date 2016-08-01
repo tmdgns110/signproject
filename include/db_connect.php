@@ -7,8 +7,9 @@ function db_con()
 {
 	$host = "localhost";
 	$user = "root";
-	$pwd = "i'mthere";
-  $db_name = "EM";
+	$pwd = "1234";
+ 
+	$db_name = "EM";
   
 	$con = mysql_connect($host,$user,$pwd);
 	if($con==0) echo mysql_error();

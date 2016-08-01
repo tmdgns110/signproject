@@ -1,12 +1,13 @@
 <?php 
-require "conn.php";
-$user_name = $_POST["user_name"];
-$user_pass = $_POST["password"];
-$mysql_qry = "select * from employee_data where username like '$user_name' and password like '$user_pass';";
-$result = mysqli_query($conn ,$mysql_qry);
+require "../lib.php";
+$username = $_POST["username"];
+$password = $_POST["password"];
 
-if(mysqli_num_rows($result) > 0) {
-echo "login success !!!!! Welcome user";
+$query = "select * from employee where username like '$username' and password like '$password';";
+$result = mysql_query($query,$conn);
+
+if(mysql_num_rows($result) > 0) {
+echo "login success !!!!! Welcome ".$username." <br>";
 }
 else {
 echo "login not success";

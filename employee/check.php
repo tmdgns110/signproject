@@ -1,10 +1,10 @@
 <?php 
-require "conn.php";
-$user_name = $_POST["user_name"];
-$mysql_qry = "select * from employee_data where username like '$user_name';";
-$result = mysqli_query($conn ,$mysql_qry);
+require "../lib.php";
+$username = $_POST["username"];
+$query = "select * from employee where username like '$username';";
+$result = mysql_query($query ,$conn);
 
-if(mysqli_num_rows($result) > 0) {
+if(mysql_num_rows($result) > 0) {
 echo "it is existed!";
 }
 else {
