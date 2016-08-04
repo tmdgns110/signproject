@@ -15,6 +15,7 @@ function db_con()
 	if($con==0) echo mysql_error();
 
 	mysql_select_db($db_name, $con);
+	mysql_set_charset('utf8');
 	return $con;
 }
 

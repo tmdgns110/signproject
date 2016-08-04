@@ -1,7 +1,6 @@
 <?php
 /* create all tables that we need. */
 include "../lib.php";
-echo "con is ". $conn."<br>";
 /*____________________________________________________________________*/
 /* create the table named "employee" */
 $result = mysql_query("create table ".$employee."(".
@@ -32,6 +31,7 @@ $result3 = mysql_query("create table ".$menuList."(".
 		"menu varchar(30) not null,".
 		"price int not null,".
 		"info varchar(50),".
+		"date date,".
 		"code int not null,".
 		"foreign key(code) references storeList(code) ".
 		"on delete cascade".
