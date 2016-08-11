@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="kr.soen.project_base_2.RegisterActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/RetUserName"
+        android:layout_marginTop="81dp"
+        android:text="ID"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/OnCheck" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/RetPassword"
+        android:text="passowrd"
+        android:layout_below="@+id/RetUserName"
+        android:layout_alignStart="@+id/RetUserName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/RetPasswordConf"
+        android:text="Password"
+        android:layout_below="@+id/RetPassword"
+        android:layout_alignStart="@+id/RetPassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/RetStore"
+        android:layout_below="@+id/RetPasswordConf"
+        android:layout_alignStart="@+id/RetPasswordConf"
+        android:text="STORE " />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/RetBranch"
+        android:layout_below="@+id/RetStore"
+        android:layout_alignStart="@+id/RetStore"
+        android:text="BRANCH" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:id="@+id/button4"
+        android:onClick="LBACK"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/button6"
+        android:layout_marginBottom="35dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        android:id="@+id/OnCheck"
+        android:layout_alignTop="@+id/RetUserName"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/RetPassword"
+        android:onClick="OnCheck" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:id="@+id/button6"
+        android:onClick="REGISTER"
+        android:layout_marginEnd="29dp"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignEnd="@+id/RetEmail" />
+
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        android:id="@+id/CBranch"
+        android:layout_below="@+id/RetStore"
+        android:layout_toEndOf="@+id/RetStore"
+        android:layout_alignBottom="@+id/RetBranch"
+        android:onClick="CBranch" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/RetEmail"
+        android:layout_below="@+id/RetBranch"
+        android:layout_alignStart="@+id/RetBranch"
+        android:text="Email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/RetPn"
+        android:layout_below="@+id/RetEmail"
+        android:layout_alignStart="@+id/RetEmail"
+        android:text="PhoneNumber" />
+
+
+</RelativeLayout>
