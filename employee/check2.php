@@ -1,13 +1,13 @@
 <?php 
-require "conn.php";
+require "../lib.php";
 $store = $_POST["store"];
 $branch = $_POST["branch"];
 
-$mysql_qry = "select * from employee_data where store like '$store' and branch like '$branch';";
-$result = mysqli_query($conn ,$mysql_qry);
+$query = "select * from employee where store like '$store' and branch like '$branch';";
+$result = mysql_query($query,$conn);
 
 
-if(mysqli_num_rows($result) > 0) {
+if(mysql_num_rows($result) > 0) {
 echo "it is existed!";
 }
 else {
