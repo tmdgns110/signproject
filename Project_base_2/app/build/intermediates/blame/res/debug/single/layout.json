@@ -20,20 +20,20 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
