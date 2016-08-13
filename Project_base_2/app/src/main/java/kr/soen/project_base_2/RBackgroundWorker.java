@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -192,8 +193,14 @@ public class RBackgroundWorker extends AsyncTask<String,Void,String> {
         alertDialog.setMessage(result);
         alertDialog.show();
         if(Objects.equals(result, "success")) {
-            Intent intent = new Intent(context, LoginActivity.class);
-            context.startActivity(intent);
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable(){
+                public void run(){
+                    alertDialog.dismiss();
+                    Intent intent = new Intent(context, LoginActivity.class);
+                    context.startActivity(intent);
+                }
+            }, 2000);
         }
     }
 

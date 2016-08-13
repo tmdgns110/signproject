@@ -12,30 +12,31 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MODIFY"
-        android:id="@+id/btnModify"
+        android:text="ADD"
+        android:id="@+id/btnAdd"
         android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:onClick="Modify" />
+        android:onClick="Add" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DELETE"
         android:id="@+id/btnDelete"
-        android:layout_alignTop="@+id/btnModify"
-        android:layout_toEndOf="@+id/btnModify"
+        android:layout_alignTop="@+id/btnAdd"
+        android:layout_toEndOf="@+id/btnAdd"
         android:layout_alignParentStart="false"
         android:onClick="Delete" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button8"
-        android:layout_alignTop="@+id/btnDelete"
-        android:layout_alignParentEnd="true" />
+        android:text="Main"
+        android:id="@+id/btnMain"
+        android:layout_below="@+id/etInfo"
+        android:layout_alignEnd="@+id/LIST"
+        android:onClick="Main" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,7 +44,7 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/etMenu"
-        android:layout_above="@+id/btnModify"
+        android:layout_above="@+id/btnAdd"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp"
         android:text="MENU" />
@@ -65,14 +66,14 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/etInfo"
-        android:layout_above="@+id/btnModify"
+        android:layout_above="@+id/btnAdd"
         android:layout_alignParentStart="true"
         android:text="INFO" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/aaa"
+        android:id="@+id/LIST"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/etMenu"
         android:layout_alignParentEnd="true"

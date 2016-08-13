@@ -2,7 +2,10 @@ package kr.soen.project_base_2;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,6 +25,8 @@ import java.net.URLEncoder;
 public class MBackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
+
+
     MBackgroundWorker(Context ctx) {
         context = ctx;
     }
@@ -29,13 +34,12 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... params) {
         String type = params[0];
 
-        if (type.equals("modi")) {
-            String login_url = "http://175.126.112.137/employee/.php";
+        if (type.equals("add") || type.equals("del")) {
+            String login_url = "http://175.126.112.137/employee/main.php";
             try {
                 String menu = params[1];
                 String price = params[2];
                 String info = params[3];
-                String key = params[4];
 
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -44,7 +48,8 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("menu", "UTF-8") + "=" + URLEncoder.encode(menu, "UTF-8")+"&"
+                String post_data = URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(type, "UTF-8")+"&"
+                        + URLEncoder.encode("menu", "UTF-8") + "=" + URLEncoder.encode(menu, "UTF-8")+"&"
                         +URLEncoder.encode("price","UTF-8")+"="+URLEncoder.encode(price,"UTF-8")+"&"
                         +URLEncoder.encode("info","UTF-8")+"="+URLEncoder.encode(info,"UTF-8");
                 bufferedWriter.write(post_data);
@@ -68,6 +73,32 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
             }
         }
+
         return null;
     }
+
+
+
+    protected void onPreExecute() {
+        alertDialog = new AlertDialog.Builder(context).create();
+        alertDialog.setTitle("Modify Status");
     }
+
+    protected void onPostExecute(String result) {
+            alertDialog.setMessage(result);
+            alertDialog.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable(){
+                                public void run(){
+                                    alertDialog.dismiss();
+                                    Intent intent = new Intent(context, ModifyActivity.class);
+                                    context.startActivity(intent);
+                                }
+                            }, 2000);
+
+    }
+
+    protected void onProgressUpdate(Void... values) {
+        super.onProgressUpdate(values);
+    }
+}

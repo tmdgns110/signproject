@@ -612,6 +612,7 @@ int drawable ic_local_see_black_24dp 0x7f020051
 int drawable notification_template_icon_bg 0x7f020052
 int id CBranch 0x7f0c008a
 int id Exit 0x7f0c0078
+int id LIST 0x7f0c007e
 int id Map 0x7f0c0077
 int id OnCheck 0x7f0c0082
 int id Pad 0x7f0c0076
@@ -623,7 +624,6 @@ int id RetPasswordConf 0x7f0c0084
 int id RetPn 0x7f0c008b
 int id RetStore 0x7f0c0085
 int id RetUserName 0x7f0c0081
-int id aaa 0x7f0c0080
 int id action0 0x7f0c0095
 int id action_bar 0x7f0c005d
 int id action_bar_activity_content 0x7f0c0000
@@ -646,15 +646,15 @@ int id always 0x7f0c0035
 int id auto 0x7f0c0031
 int id beginning 0x7f0c0033
 int id bottom 0x7f0c0021
+int id btnAdd 0x7f0c007a
 int id btnDelete 0x7f0c007b
 int id btnLogin 0x7f0c0072
-int id btnModify 0x7f0c007a
+int id btnMain 0x7f0c007c
 int id button 0x7f0c0079
 int id button2 0x7f0c0074
 int id button3 0x7f0c0073
 int id button4 0x7f0c0087
 int id button6 0x7f0c0088
-int id button8 0x7f0c007c
 int id buttonPanel 0x7f0c0046
 int id cancel_action 0x7f0c0096
 int id center 0x7f0c0022
@@ -682,10 +682,10 @@ int id end 0x7f0c0025
 int id end_padder 0x7f0c00a1
 int id enterAlways 0x7f0c0015
 int id enterAlwaysCollapsed 0x7f0c0016
-int id etInfo 0x7f0c007f
-int id etMenu 0x7f0c007d
+int id etInfo 0x7f0c007d
+int id etMenu 0x7f0c007f
 int id etPassword 0x7f0c0070
-int id etPrice 0x7f0c007e
+int id etPrice 0x7f0c0080
 int id etUserName 0x7f0c006f
 int id exitUntilCollapsed 0x7f0c0017
 int id expand_activities_button 0x7f0c0040

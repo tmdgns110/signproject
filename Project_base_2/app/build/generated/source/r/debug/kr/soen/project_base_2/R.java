@@ -2479,6 +2479,7 @@ containing a value of this type.
     public static final class id {
         public static final int CBranch=0x7f0c008a;
         public static final int Exit=0x7f0c0078;
+        public static final int LIST=0x7f0c007e;
         public static final int Map=0x7f0c0077;
         public static final int OnCheck=0x7f0c0082;
         public static final int Pad=0x7f0c0076;
@@ -2490,7 +2491,6 @@ containing a value of this type.
         public static final int RetPn=0x7f0c008b;
         public static final int RetStore=0x7f0c0085;
         public static final int RetUserName=0x7f0c0081;
-        public static final int aaa=0x7f0c0080;
         public static final int action0=0x7f0c0095;
         public static final int action_bar=0x7f0c005d;
         public static final int action_bar_activity_content=0x7f0c0000;
@@ -2513,15 +2513,15 @@ containing a value of this type.
         public static final int auto=0x7f0c0031;
         public static final int beginning=0x7f0c0033;
         public static final int bottom=0x7f0c0021;
+        public static final int btnAdd=0x7f0c007a;
         public static final int btnDelete=0x7f0c007b;
         public static final int btnLogin=0x7f0c0072;
-        public static final int btnModify=0x7f0c007a;
+        public static final int btnMain=0x7f0c007c;
         public static final int button=0x7f0c0079;
         public static final int button2=0x7f0c0074;
         public static final int button3=0x7f0c0073;
         public static final int button4=0x7f0c0087;
         public static final int button6=0x7f0c0088;
-        public static final int button8=0x7f0c007c;
         public static final int buttonPanel=0x7f0c0046;
         public static final int cancel_action=0x7f0c0096;
         public static final int center=0x7f0c0022;
@@ -2549,10 +2549,10 @@ containing a value of this type.
         public static final int end_padder=0x7f0c00a1;
         public static final int enterAlways=0x7f0c0015;
         public static final int enterAlwaysCollapsed=0x7f0c0016;
-        public static final int etInfo=0x7f0c007f;
-        public static final int etMenu=0x7f0c007d;
+        public static final int etInfo=0x7f0c007d;
+        public static final int etMenu=0x7f0c007f;
         public static final int etPassword=0x7f0c0070;
-        public static final int etPrice=0x7f0c007e;
+        public static final int etPrice=0x7f0c0080;
         public static final int etUserName=0x7f0c006f;
         public static final int exitUntilCollapsed=0x7f0c0017;
         public static final int expand_activities_button=0x7f0c0040;

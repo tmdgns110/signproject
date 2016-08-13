@@ -8,12 +8,12 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
@@ -28,12 +28,20 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_create_black_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_create_black_24dp.png"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_import_contacts_black_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_import_contacts_black_24dp.png"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_48dp.png",
@@ -96,6 +104,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_local_see_black_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_local_see_black_24dp.png"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -122,6 +134,10 @@
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_close_black_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_close_black_24dp.png"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",

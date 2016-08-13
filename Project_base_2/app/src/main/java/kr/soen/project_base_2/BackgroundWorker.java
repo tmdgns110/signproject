@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.icu.util.Output;
 import android.os.AsyncTask;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -81,14 +83,21 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+            alertDialog.setMessage(result);
+            alertDialog.show();
+
         if(Objects.equals(result, "login not success")) {
 
         }
         else{
-            Intent intent = new Intent(context, ModifyActivity.class);
-            context.startActivity(intent);
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable(){
+                public void run(){
+                    alertDialog.dismiss();
+                    Intent intent = new Intent(context, ModifyActivity.class);
+                    context.startActivity(intent);
+                }
+            }, 2000);
         }
 
     }

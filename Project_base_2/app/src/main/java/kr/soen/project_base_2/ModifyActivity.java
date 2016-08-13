@@ -1,8 +1,10 @@
 package kr.soen.project_base_2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,7 +21,7 @@ import java.net.URL;
 public class ModifyActivity extends AppCompatActivity {
 
     EditText MenuEt, PriceEt, InfoEt;
-    String url = "http://175.126.112.137/test/test2.php";
+    String url = "http://175.126.112.137/employee/main.php";
 
     TextView tv;
     public GettingPHP gPHP;
@@ -34,9 +36,11 @@ public class ModifyActivity extends AppCompatActivity {
 
         gPHP = new GettingPHP();
 
-        tv=(TextView)findViewById(R.id.aaa);
+        tv=(TextView)findViewById(R.id.LIST);
         gPHP.execute(url);
     }
+
+
 
     class GettingPHP extends AsyncTask<String, Integer, String> {
         @Override
@@ -71,34 +75,58 @@ public class ModifyActivity extends AppCompatActivity {
                 JSONObject jObject = new JSONObject(str);
                 // results라는 key는 JSON배열로 되어있다.
                 JSONArray results = jObject.getJSONArray("results");
-                String zz = "";
-                zz += "Status : " + jObject.get("Status");
-                zz += "\n";
-                zz += "Number of results : " + jObject.get("num_results");
-                zz += "\n";
-                zz += "results : \n";
+                String list = "";
+                list += "Status : " + jObject.get("Status");
+                list += "\n";
+                list += "Number of results : " + jObject.get("num_results");
+                list += "\n";
+                list += "results : \n";
                 for ( int i = 0; i < results.length(); ++i ) {
                     JSONObject temp = results.getJSONObject(i);
-                    zz += "\t : " + temp.get("menu");
-                    zz += "\t : " + temp.get("price");
-                    zz += "\t : " + temp.get("info");
-                    zz += "\n\t--------------------------------------------\n";
+                    list += "\tMenu : " + temp.get("menu");
+                    list += "\tPrice : " + temp.get("price");
+                    list += "\tInfo : " + temp.get("info");
+                    list += "\n\t--------------------------------------------\n";
                 }
-                tv.setText(zz);
+                tv.setText(list);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
     }
-    public void Modify(View view) {
+    public void Add(View view) {
         String menu = MenuEt.getText().toString();
         String price = PriceEt.getText().toString();
         String info = InfoEt.getText().toString();
-        String type = "modi";
+        String type = "add";
         MBackgroundWorker mbackgroundWorker = new MBackgroundWorker(this);
         mbackgroundWorker.execute(type, menu, price, info);
+    }
+
+    public void Delete(View view) {
+        String menu = MenuEt.getText().toString();
+        String price = PriceEt.getText().toString();
+        String info = InfoEt.getText().toString();
+        String type = "del";
+        MBackgroundWorker mbackgroundWorker = new MBackgroundWorker(this);
+        mbackgroundWorker.execute(type, menu, price, info);
+    }
+
+    public void Main(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
 
 
+    public boolean onKeyDown(int KeyCode, KeyEvent event){
+
+        if(KeyCode == KeyEvent.KEYCODE_BACK)
+        {
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+
+        return false;
     }
 }
 
