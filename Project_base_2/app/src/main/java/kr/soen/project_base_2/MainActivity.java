@@ -1,8 +1,12 @@
 package kr.soen.project_base_2;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
+import android.content.Context;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -20,11 +24,49 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.content.SharedPreferences;
 
+class ManagerActivity{
+
+    private static ManagerActivity managerActivity = null;
+    private ArrayList<Activity>activityList=null;
+
+    private ManagerActivity(){
+        activityList = new ArrayList<Activity>();
+    }
+
+    public static ManagerActivity getInstance() {
+        if(ManagerActivity.managerActivity == null){
+            managerActivity = new ManagerActivity();
+        }
+        return managerActivity;
+    }
+
+    public ArrayList<Activity> getActivityList() {
+        return activityList;
+    }
+
+    public void addActivity(Activity activity){
+        activityList.add(activity);
+    }
+
+    public boolean removeActivity(Activity activity){
+        return activityList.remove(activity);
+    }
+
+    public void finishAllActivity() {
+        for(Activity activity : activityList){
+            activity.finish();
+        }
+    }
+
+}
 public class MainActivity extends Activity implements OnClickListener {
 
+    private ManagerActivity managerActivity = ManagerActivity.getInstance();
     private static final int PICK_FROM_CAMERA =0;
     private static final int CROP_FROM_CAMERA =1;
+
 
     private Uri mImageCaptureUri;
     private ImageView mPhotoImageView;
@@ -37,7 +79,16 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        managerActivity.addActivity(this);
+        SharedPreferences mPref = getSharedPreferences("mPref",MODE_PRIVATE);
+        String maintainid = mPref.getString("maintainid","");
+        String maintainpw = mPref.getString("maintainpw","");
+        if(Objects.equals(maintainid,"") || Objects.equals(maintainpw,"")){
+            setContentView(R.layout.activity_main);
+       }
+       else{
+          setContentView(R.layout.activity_maintain);
+       }
 
         mButton = (ImageButton)findViewById(R.id.Photo);
         eButton = (ImageButton)findViewById(R.id.Exit);
@@ -50,9 +101,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
         backPressCloseHandler = new BackPressCloseHandler(this);
     }
-
-
-
 
 
     private void doTakePhotoAction()
@@ -160,13 +208,33 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }}
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        managerActivity.removeActivity(this);
+    }
+
     public void LOGIN(View view) {
         Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
 
+    public void LOGOUT(View view) {
+        SharedPreferences mPref = getSharedPreferences("mPref",MODE_PRIVATE);
+       SharedPreferences.Editor editor = mPref.edit();
+        editor.clear();
+       editor.commit();
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
 
-public class BackPressCloseHandler{
+    public void Modify(View view) {
+        Intent intent = new Intent(this,ModifyActivity.class);
+        startActivity(intent);
+    }
+
+
+    public class BackPressCloseHandler{
 
     private long BackKeyPressedTime = 0;
     private Toast toast;
@@ -187,6 +255,7 @@ public class BackPressCloseHandler{
         if(System.currentTimeMillis() <= BackKeyPressedTime + 2000){
             activity.finish();
             toast.cancel();
+            ManagerActivity.getInstance().finishAllActivity();
         }
     }
 

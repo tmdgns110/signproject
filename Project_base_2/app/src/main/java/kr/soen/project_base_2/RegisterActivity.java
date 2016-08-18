@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
+    private ManagerActivity managerActivity = ManagerActivity.getInstance();
+
     EditText RUsernameEt, RPasswordEt, RPasswordEtConf, RStoreEt, RBranchEt, REmailEt, RPnEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        managerActivity.addActivity(this);
         setContentView(R.layout.activity_register);
         RUsernameEt = (EditText)findViewById(R.id.RetUserName);
         RPasswordEt = (EditText)findViewById(R.id.RetPassword);
@@ -183,6 +186,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        managerActivity.removeActivity(this);
+    }
 
 
 

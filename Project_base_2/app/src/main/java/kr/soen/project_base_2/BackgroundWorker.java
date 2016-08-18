@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.widget.Toast;
+import android.content.SharedPreferences;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,14 +35,20 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     BackgroundWorker(Context ctx) {
         context = ctx;
     }
+    String loginid;
+    String loginpw;
+
+
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
+        String username =params[1];
+        String password = params[2];
+        loginid = username;
+        loginpw = password;
         String login_url = "http://175.126.112.137/employee/login.php";
         if(type.equals("login")) {
             try {
-                String username =params[1];
-                String password = params[2];
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -90,6 +97,13 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
         }
         else{
+
+            SharedPreferences mPref = context.getSharedPreferences("mPref",context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = mPref.edit();
+            editor.putString("maintainid",loginid);
+           editor.putString("maintainpw",loginpw);
+            editor.commit();
+
             Handler handler = new Handler();
             handler.postDelayed(new Runnable(){
                 public void run(){
@@ -106,5 +120,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
     }
+
+
 }
 

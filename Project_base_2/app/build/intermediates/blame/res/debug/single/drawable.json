@@ -100,8 +100,16 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\ic_local_see_black_24dp.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sign.bmp",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\sign.bmp"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\panel.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\panel.jpg"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
@@ -128,6 +136,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yes.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\yes.jpg"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
@@ -140,6 +152,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pan.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\pan.jpg"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
@@ -150,6 +166,10 @@
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\feel.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\feel.jpg"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",

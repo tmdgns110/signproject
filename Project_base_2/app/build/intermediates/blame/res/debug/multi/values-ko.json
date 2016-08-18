@@ -381,6 +381,63 @@
                         "endOffset": 1986
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1991,
+                    "endColumn": 50,
+                    "endOffset": 2037
+                },
+                "from": {
+                    "file": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.github.ParkSangGwon\\TedPermission\\v1.0.12\\res\\values-ko\\values-ko.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 50,
+                        "endOffset": 101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2042,
+                    "endColumn": 52,
+                    "endOffset": 2090
+                },
+                "from": {
+                    "file": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.github.ParkSangGwon\\TedPermission\\v1.0.12\\res\\values-ko\\values-ko.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 106,
+                        "endColumn": 52,
+                        "endOffset": 154
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2095,
+                    "endColumn": 52,
+                    "endOffset": 2143
+                },
+                "from": {
+                    "file": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.github.ParkSangGwon\\TedPermission\\v1.0.12\\res\\values-ko\\values-ko.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 159,
+                        "endColumn": 52,
+                        "endOffset": 207
+                    }
+                }
             }
         ]
     }

@@ -44,6 +44,9 @@
         </activity>
         <activity android:name="kr.soen.project_base_2.RegisterActivity" />
         <activity android:name="kr.soen.project_base_2.ModifyActivity" />
+        <activity
+            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+            android:theme="@style/Theme.Transparent" />
     </application>
 
 </manifest>

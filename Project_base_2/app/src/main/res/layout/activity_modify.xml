@@ -34,9 +34,9 @@
         android:layout_height="wrap_content"
         android:text="Main"
         android:id="@+id/btnMain"
-        android:layout_below="@+id/etInfo"
-        android:layout_alignEnd="@+id/LIST"
-        android:onClick="Main" />
+        android:onClick="Main"
+        android:layout_alignTop="@+id/btnDelete"
+        android:layout_toEndOf="@+id/btnDelete" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -70,13 +70,27 @@
         android:layout_alignParentStart="true"
         android:text="INFO" />
 
-    <TextView
+
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/LIST"
+        android:id="@+id/SV"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/etMenu"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+    </ScrollView>
+
+    <TextView
+        android:scrollbars = "vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/LIST"
+        android:layout_above="@+id/etPrice"
+        android:layout_below="@+id/SV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>

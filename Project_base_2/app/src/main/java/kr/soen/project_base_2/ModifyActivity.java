@@ -1,12 +1,16 @@
 package kr.soen.project_base_2;
 
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.json.JSONArray;
@@ -20,14 +24,20 @@ import java.net.URL;
 
 public class ModifyActivity extends AppCompatActivity {
 
+    private ManagerActivity managerActivity = ManagerActivity.getInstance();
+
     EditText MenuEt, PriceEt, InfoEt;
     String url = "http://175.126.112.137/employee/main.php";
 
     TextView tv;
+    ScrollView sv;
+
     public GettingPHP gPHP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        managerActivity.addActivity(this);
 
         setContentView(R.layout.activity_modify);
         MenuEt = (EditText)findViewById(R.id.etMenu);
@@ -37,6 +47,16 @@ public class ModifyActivity extends AppCompatActivity {
         gPHP = new GettingPHP();
 
         tv=(TextView)findViewById(R.id.LIST);
+        sv =(ScrollView)findViewById(R.id.SV);
+        tv.setMovementMethod(new ScrollingMovementMethod());
+        tv.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                sv.requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
+
         gPHP.execute(url);
     }
 
@@ -113,7 +133,9 @@ public class ModifyActivity extends AppCompatActivity {
     }
 
     public void Main(View view) {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent
+
+                (this,MainActivity.class);
         startActivity(intent);
     }
 
@@ -127,6 +149,11 @@ public class ModifyActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        managerActivity.removeActivity(this);
     }
 }
 

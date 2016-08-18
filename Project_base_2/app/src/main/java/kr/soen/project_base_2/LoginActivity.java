@@ -8,11 +8,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.content.Intent;
 
+
 public class LoginActivity extends AppCompatActivity {
+    private ManagerActivity managerActivity = ManagerActivity.getInstance();
     EditText UsernameEt, PasswordEt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        managerActivity.addActivity(this);
         setContentView(R.layout.activity_login);
 
         UsernameEt = (EditText)findViewById(R.id.etUserName);
@@ -46,6 +49,12 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        managerActivity.removeActivity(this);
     }
 }
 

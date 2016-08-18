@@ -20,4 +20,7 @@
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s와(과) 공유"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"접기"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="tedpermission_close">닫기</string>
+    <string name="tedpermission_confirm">확인</string>
+    <string name="tedpermission_setting">설정</string>
 </resources>
