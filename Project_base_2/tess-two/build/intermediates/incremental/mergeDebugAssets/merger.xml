@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\android\signproject-master_ver.1.0\Project_base_2\tess-two\src\main\assets"/><source path="C:\android\signproject-master_ver.1.0\Project_base_2\tess-two\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\android\signproject-master_ver.1.0\Project_base_2\tess-two\src\debug\assets"/></dataSet></merger>

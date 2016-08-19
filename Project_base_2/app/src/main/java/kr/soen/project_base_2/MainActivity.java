@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 
+import android.Manifest;
 import android.content.Context;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.content.SharedPreferences;
+
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
 
 class ManagerActivity{
 
@@ -61,6 +65,8 @@ class ManagerActivity{
     }
 
 }
+
+
 public class MainActivity extends Activity implements OnClickListener {
 
     private ManagerActivity managerActivity = ManagerActivity.getInstance();
@@ -79,6 +85,42 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        PermissionListener permissionlistener = new PermissionListener() {
+            @Override
+            public void onPermissionGranted() {
+                Toast.makeText(MainActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+                Toast.makeText(MainActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+
+
+        };
+
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setRationaleMessage("카메라를 사용하기 위해서는 위치 접근 권한이 필요해요")
+                .setDeniedMessage("왜 거부하셨어요...\n하지만 [설정] > [권한] 에서 권한을 허용할 수 있어요.")
+                .setPermissions(Manifest.permission.READ_CONTACTS)
+                .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.CAMERA)
+                .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.GET_ACCOUNTS)
+                .check();
+
+
         managerActivity.addActivity(this);
         SharedPreferences mPref = getSharedPreferences("mPref",MODE_PRIVATE);
         String maintainid = mPref.getString("maintainid","");
@@ -230,6 +272,11 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void Modify(View view) {
         Intent intent = new Intent(this,ModifyActivity.class);
+        startActivity(intent);
+    }
+
+    public void test(View view) {
+        Intent intent = new Intent(this,SimpleAndroidOCRActivity.class);
         startActivity(intent);
     }
 

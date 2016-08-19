@@ -10,12 +10,16 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/tedpermission" />
+            <option value="$PROJECT_DIR$/tess-two" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/tedpermission" />
+            <option value="$PROJECT_DIR$/tess-two" />
           </set>
         </option>
       </GradleProjectSettings>
