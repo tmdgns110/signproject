@@ -2,6 +2,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 apply plugin: 'com.android.library'
 
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -29,6 +30,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+
 
     // Call external ndk-build(.cmd) script to build the native code
     task ndkBuild(type: Exec) {

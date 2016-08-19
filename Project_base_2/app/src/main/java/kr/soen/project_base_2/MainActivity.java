@@ -119,6 +119,10 @@ public class MainActivity extends Activity implements OnClickListener {
                 .setPermissionListener(permissionlistener)
                 .setPermissions(Manifest.permission.GET_ACCOUNTS)
                 .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
+                .check();
 
 
         managerActivity.addActivity(this);

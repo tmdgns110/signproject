@@ -20,16 +20,16 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\tess-two\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",

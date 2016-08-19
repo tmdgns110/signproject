@@ -35,7 +35,7 @@ public class SimpleAndroidOCRActivity extends Activity {
 	// You should have the trained data file in assets folder
 	// You can get them at:
 	// http://code.google.com/p/tesseract-ocr/downloads/list
-	public static final String lang = "eng";
+	public static final String lang = "kor";
 
 	private static final String TAG = "SimpleAndroidOCR.java";
 
