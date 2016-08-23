@@ -32,6 +32,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="kr.soen.project_base_2.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
 
             <!-- 세로로 화면 고정 -->
@@ -51,10 +52,7 @@
         </activity>
         <activity android:name="kr.soen.project_base_2.RegisterActivity" />
         <activity android:name="kr.soen.project_base_2.ModifyActivity" />
-        <activity
-            android:name="kr.soen.project_base_2.SimpleAndroidOCRActivity"
-            android:configChanges="orientation|keyboardHidden" >
-        </activity>
+        <activity android:name="kr.soen.project_base_2.GuestActivity" />
         <activity
             android:name="com.gun0912.tedpermission.TedPermissionActivity"
             android:theme="@style/Theme.Transparent" />

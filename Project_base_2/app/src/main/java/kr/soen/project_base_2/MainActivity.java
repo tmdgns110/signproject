@@ -1,12 +1,23 @@
 package kr.soen.project_base_2;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Objects;
 
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -20,13 +31,19 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.content.SharedPreferences;
 
+import com.googlecode.tesseract.android.TessBaseAPI;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
@@ -72,19 +89,35 @@ public class MainActivity extends Activity implements OnClickListener {
     private ManagerActivity managerActivity = ManagerActivity.getInstance();
     private static final int PICK_FROM_CAMERA =0;
     private static final int CROP_FROM_CAMERA =1;
+    public static final String PACKAGE_NAME = "kr.soen.project_base_2";
+    public static final String DATA_PATH = Environment
+            .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
+    public static final String lang = "eng";
 
+    private static final String TAG = "mainActivity.java";
+    protected EditText _field;
+    protected String _path;
+    protected boolean _taken;
+
+    AlertDialog alertDialog;
+    AlertDialog inputstDialog;
+    AlertDialog inputbrDialog;
+
+
+
+    protected static final String PHOTO_TAKEN = "photo_taken";
 
     private Uri mImageCaptureUri;
     private ImageView mPhotoImageView;
     private ImageButton mButton;
     private ImageButton eButton;
-
 //    뒤로 버튼 누를 때 창 뜨는
     private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
@@ -124,6 +157,54 @@ public class MainActivity extends Activity implements OnClickListener {
                 .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .check();
 
+        String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/" };
+
+        for (String path : paths) {
+            File dir = new File(path);
+            if (!dir.exists()) {
+                if (!dir.mkdirs()) {
+                    Log.v(TAG, "ERROR: Creation of directory " + path + " on sdcard failed");
+                    return;
+                } else {
+                    Log.v(TAG, "Created directory " + path + " on sdcard");
+                }
+            }
+
+        }
+
+        if (!(new File(DATA_PATH + "tessdata/" + lang + ".traineddata")).exists()) {
+            try {
+
+                AssetManager assetManager = getAssets();
+                InputStream in = assetManager.open("tessdata/" + lang + ".traineddata");
+                //GZIPInputStream gin = new GZIPInputStream(in);
+                OutputStream out = new FileOutputStream(DATA_PATH
+                        + "tessdata/" + lang + ".traineddata");
+
+                // Transfer bytes from in to out
+                byte[] buf = new byte[1024];
+                int len;
+                //while ((lenf = gin.read(buff)) > 0) {
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+                in.close();
+                //gin.close();
+                out.close();
+
+                Log.v(TAG, "Copied " + lang + " traineddata");
+            } catch (IOException e) {
+                Log.e(TAG, "Was unable to copy " + lang + " traineddata " + e.toString());
+            }
+        }
+
+
+
+        // _image = (ImageView) findViewById(R.id.image);
+         View v = getLayoutInflater().inflate(R.layout.guestmode, null);
+        _field = (EditText) v.findViewById(R.id.field);
+
+        _path = DATA_PATH + "/ocr.jpg";
 
         managerActivity.addActivity(this);
         SharedPreferences mPref = getSharedPreferences("mPref",MODE_PRIVATE);
@@ -151,10 +232,13 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private void doTakePhotoAction()
     {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        String url = "tmp_" + String.valueOf(System.currentTimeMillis()) + "jpg";
-        mImageCaptureUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),url));
-
+        //File file = new File(_path);
+        //Uri outputFileUri = Uri.fromFile(file);
+        final Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+        //startActivityForResult(intent, 0);
+        //String url = "tmp_" + String.valueOf(System.currentTimeMillis()) + "jpg";
+        mImageCaptureUri = Uri.fromFile(new File(_path));
         intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT,mImageCaptureUri);
         startActivityForResult(intent, PICK_FROM_CAMERA);
     }
@@ -162,6 +246,8 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
+        Log.i(TAG, "resultCode: " + resultCode);
+
         if(resultCode != RESULT_OK)
         {
             return;
@@ -176,7 +262,19 @@ public class MainActivity extends Activity implements OnClickListener {
                 if(extras != null)
                 {
                     Bitmap photo = extras.getParcelable("data");
-                    mPhotoImageView.setImageBitmap(photo);
+                   // mPhotoImageView.setImageBitmap(photo);
+                    File copyFile = new File(_path);
+                    BufferedOutputStream out = null;
+                       try {
+                           copyFile.createNewFile();
+                           out = new BufferedOutputStream(new FileOutputStream(copyFile));
+                           photo.compress(Bitmap.CompressFormat.JPEG, 100, out);
+                            out.flush();
+                           out.close();
+                       } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    onPhotoTaken();
                 }
 
                 File f =new File(mImageCaptureUri.getPath());
@@ -184,6 +282,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 {
                     f.delete();
                 }
+
                 break;
 
         }
@@ -205,6 +304,208 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putBoolean(MainActivity.PHOTO_TAKEN, _taken);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        Log.i(TAG, "onRestoreInstanceState()");
+        if (savedInstanceState.getBoolean(MainActivity.PHOTO_TAKEN)) {
+            onPhotoTaken();
+        }
+    }
+
+    protected void onPhotoTaken() {
+        _taken = true;
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        Bitmap bitmap = BitmapFactory.decodeFile(_path, options);
+            int iWidth = bitmap.getWidth();      //비트맵이미지의 넓이
+            int iHeight = bitmap.getHeight();     //비트맵이미지의 높이
+            int dstWidth = iWidth ;
+            int dstHeight = iHeight ;
+            int maxResolution = 619;
+            float rate = 0.0f;
+            //이미지의 가로 세로 비율에 맞게 조절
+            if(iWidth > iHeight ){
+                if(maxResolution < iWidth ){
+                    rate = maxResolution / (float) iWidth ;
+                    dstHeight = (int) (iHeight * rate);
+                    dstWidth = maxResolution;
+                }
+            }else{
+                if(maxResolution < iHeight ){
+                    rate = maxResolution / (float) iHeight ;
+                    dstWidth = (int) (iWidth * rate);
+                    dstHeight = maxResolution;
+                }
+            }
+        Bitmap resized = Bitmap.createScaledBitmap(bitmap, dstWidth, dstHeight, true );
+        mPhotoImageView.setImageBitmap(resized);
+
+        try {
+            ExifInterface exif = new ExifInterface(_path);
+            int exifOrientation = exif.getAttributeInt(
+                    ExifInterface.TAG_ORIENTATION,
+                    ExifInterface.ORIENTATION_NORMAL);
+
+            Log.v(TAG, "Orient: " + exifOrientation);
+
+            int rotate = 0;
+
+            switch (exifOrientation) {
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    rotate = 90;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    rotate = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    rotate = 270;
+                    break;
+            }
+
+            Log.v(TAG, "Rotation: " + rotate);
+
+            if (rotate != 0) {
+
+                // Getting width & height of the given image.
+                int w = resized.getWidth();
+                int h = resized.getHeight();
+
+                // Setting pre rotate
+                Matrix mtx = new Matrix();
+                mtx.preRotate(rotate);
+
+                // Rotating Bitmap
+                resized = Bitmap.createBitmap(resized, 0, 0, w, h, mtx, false);
+            }
+
+            // Convert to ARGB_8888, required by tess
+            resized = resized.copy(Bitmap.Config.ARGB_8888, true);
+
+        } catch (IOException e) {
+            Log.e(TAG, "Couldn't correct orientation: " + e.toString());
+        }
+
+        // _image.setImageBitmap( bitmap );
+
+        Log.v(TAG, "Before baseApi");
+
+        TessBaseAPI baseApi = new TessBaseAPI();
+        baseApi.setDebug(true);
+        baseApi.init(DATA_PATH, lang);
+        baseApi.setImage(resized);
+
+        String recognizedText = baseApi.getUTF8Text();
+
+        baseApi.end();
+
+        // You now have the text in recognizedText var, you can do anything with it.
+        // We will display a stripped out trimmed alpha-numeric version of it (if lang is eng)
+        // so that garbage doesn't make it to the display.
+
+        Log.v(TAG, "OCRED TEXT: " + recognizedText);
+
+        if ( lang.equalsIgnoreCase("eng") ) {
+            recognizedText = recognizedText.replaceAll("[^a-zA-Z0-9]+", " ");
+        }
+
+        recognizedText = recognizedText.trim();
+
+        if ( recognizedText.length() != 0 ) {
+            _field.setText(_field.getText().toString().length() == 0 ? recognizedText : _field.getText() + " " + recognizedText);
+            _field.setSelection(_field.getText().toString().length());
+            final String[] store = {_field.getText().toString()};
+            final String type = "chkstore";
+            final String[] branch = new String[2];
+
+
+                alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle("Check the store name");
+                alertDialog.setMessage("Do you want this  " + store[0] + "  right?");
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        alertDialog.cancel();
+                        inputbrDialog = new AlertDialog.Builder(MainActivity.this).create();
+                        final View innerView1 = inputbrDialog.getLayoutInflater().inflate(R.layout.sub_main1, null);
+                        inputbrDialog.setTitle("Input branch name");
+                        inputbrDialog.setView(innerView1);
+                        inputbrDialog.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                EditText sbranch;
+                                sbranch = (EditText) innerView1.findViewById(R.id.etbranch1);
+                                branch[0] = sbranch.getText().toString();
+                                Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    public void run() {
+                                        alertDialog.dismiss();
+                                        SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(MainActivity.this);
+                                        sbackgroundWorker.execute(type, store[0], branch[0]);
+                                    }
+                                }, 2000);
+
+                            }
+                        });
+                        inputbrDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        inputbrDialog.show();
+                    }
+
+                });
+                alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        alertDialog.cancel();
+                        inputstDialog = new AlertDialog.Builder(MainActivity.this).create();
+                        final View innerView = inputstDialog.getLayoutInflater().inflate(R.layout.sub_main, null);
+                        inputstDialog.setTitle("Input store name and branch name");
+                        inputstDialog.setView(innerView);
+                        inputstDialog.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                EditText sstore;
+                                EditText sbranch;
+                                sstore = (EditText) innerView.findViewById(R.id.etstore);
+                                sbranch = (EditText) innerView.findViewById(R.id.etbranch);
+                                store[0] = sstore.getText().toString();
+                                branch[1] = sbranch.getText().toString();
+
+                                SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(MainActivity.this);
+                                sbackgroundWorker.execute(type, store[0], branch[1]);
+
+                            }
+                        });
+                        inputstDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                        inputstDialog.show();
+                    }
+                });
+                alertDialog.show();
+
+
+                //SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(this);
+                //sbackgroundWorker.execute(type, store);
+            }
+
+
+        // Cycle done.
+    }
+
+    @Override
     public void onClick(View v)
     {
         if(v.getId() == R.id.Photo) {
@@ -212,6 +513,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     doTakePhotoAction();
+                   // Intent intent = new Intent(getApplicationContext(),SimpleAndroidOCRActivity.class);
+                  //  startActivity(intent);
                 }
             };
 
@@ -279,10 +582,6 @@ public class MainActivity extends Activity implements OnClickListener {
         startActivity(intent);
     }
 
-    public void test(View view) {
-        Intent intent = new Intent(this,SimpleAndroidOCRActivity.class);
-        startActivity(intent);
-    }
 
 
     public class BackPressCloseHandler{
@@ -314,8 +613,8 @@ public class MainActivity extends Activity implements OnClickListener {
         toast = Toast.makeText(activity, "\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다",Toast.LENGTH_SHORT);
         toast.show();
     }
+    }
 
-}
 
 
     @Override

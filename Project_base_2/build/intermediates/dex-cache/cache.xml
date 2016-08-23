@@ -1,3 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_383aa8e5db9a3f8b4a03a43077853f1c28266290\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\design\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.0.0_37bebbcc2942134e313727524ecb6fa8211e2fc5\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_8edfc6ed2e30fc620fa2dd063d294958a1f0fb02\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\김승훈\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\otto-1.3.7_5c665a1bf80f810d89c3bf82b17af1ee9bc3386b\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_3446a4cfdbce5e593e94ff8b3e2fa12d11a04e9d\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.0.0_b83b943b1f9fb77b7c433ab66893dfcf54a75594\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_df68b82ce013fbea7581e7fa961f239d6fa96f39\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\김승훈\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.0.0\2943c74db6d4346ab8c6531adac91fa05c137c40\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_3c4e669fdc1520f7cc8c00ad31d2818478ff9153\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="054aa265d17690712f86e6aeb18a69bc7d59749e">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9a7924df133b675e81c1eda4d3ce12cf0ab60ae7\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_892b9a5dd78cdb91e20de5e0653eff22af23b490\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_88a8cf19dbbc34466df8a853d25e3d5a9ef1d3ff\classes.dex" />
+    </item>
+    <item
+        jar="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="17e24725a76cb34f1173239482198cf2dfbea5eb">
+        <dex dex="C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d366254b5c74f2ae9090a14d293ae856c6e8b031\classes.dex" />
+    </item>
+
+</items>
