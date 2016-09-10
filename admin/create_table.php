@@ -1,5 +1,3 @@
-		"store varchar(30) not null,".
-		"store varchar(30) not null,".
 <?php
 /* create all tables that we need. */
 include "lib.php";
@@ -27,7 +25,8 @@ $result2 = mysql_query("create table ".$storeList."(".
    		"NS int not null,".
    		"EW int not null".	
 		")");
-if(!$result2) echo mysql_errno().": ".mysql_error()."<br>";
+if(!$result2) echo mysql_errno().": ".mysql_error()."<br>";
+
 else echo "You've just created the table ".$storeList."<br>";
 /*____________________________________________________________________*/
 /* create the table named "menuList" */
