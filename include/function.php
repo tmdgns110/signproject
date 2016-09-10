@@ -124,4 +124,12 @@
 			print("</table>");
 		}
 	}
+
+	function calDistance($x1, $y1, $x2, $y2)
+	{
+		$subNS = $x2-$x1;
+		$subEW = $y2-$y1;
+		$distance = sqrt(pow($subNS,2) + pow($subEW,2));
+		return $distance;
+	}
 ?>
