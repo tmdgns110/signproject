@@ -44,7 +44,8 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... params) {
         String type = params[0];
         String store = params[1];
-        String branch = params[2];
+        String latitude = params[2];
+        String longitude = params[3];
         rstore = store;
         if (type.equals("chkstore")) {
             String login_url = "http://175.126.112.137/search.php";
@@ -57,7 +58,8 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String post_data = URLEncoder.encode("store", "UTF-8") + "=" + URLEncoder.encode(store, "UTF-8")+"&"
-                        + URLEncoder.encode("branch", "UTF-8") + "=" + URLEncoder.encode(branch, "UTF-8");
+                        + URLEncoder.encode("latitude", "UTF-8") + "=" + URLEncoder.encode(latitude, "UTF-8")+"&"
+                        + URLEncoder.encode("longitude", "UTF-8") + "=" + URLEncoder.encode(longitude, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -100,7 +102,6 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
                 Intent intent = new Intent(context, GuestActivity.class);
                 context.startActivity(intent);
             }
-    //
            }, 2000);
 /*
         if(Objects.equals(type, "yes")) {

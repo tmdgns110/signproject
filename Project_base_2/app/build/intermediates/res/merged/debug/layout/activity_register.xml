@@ -15,10 +15,10 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/RetUserName"
-        android:layout_marginTop="81dp"
-        android:text="ID"
+        android:layout_marginTop="52dp"
+        android:hint="ID"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/OnCheck" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -48,17 +48,7 @@
         android:id="@+id/RetStore"
         android:layout_below="@+id/RetPasswordConf"
         android:layout_alignStart="@+id/RetPasswordConf"
-        android:text="STORE " />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/RetBranch"
-        android:layout_below="@+id/RetStore"
-        android:layout_alignStart="@+id/RetStore"
-        android:text="BRANCH" />
+        android:hint="STORE " />
 
     <Button
         android:layout_width="wrap_content"
@@ -67,8 +57,7 @@
         android:id="@+id/button4"
         android:onClick="LBACK"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/button6"
-        android:layout_marginBottom="35dp" />
+        android:layout_toStartOf="@+id/button6" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -93,16 +82,6 @@
 
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CHECK"
-        android:id="@+id/CBranch"
-        android:layout_below="@+id/RetStore"
-        android:layout_toEndOf="@+id/RetStore"
-        android:layout_alignBottom="@+id/RetBranch"
-        android:onClick="CBranch" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -110,9 +89,9 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/RetEmail"
-        android:layout_below="@+id/RetBranch"
-        android:layout_alignStart="@+id/RetBranch"
-        android:text="Email" />
+        android:layout_below="@+id/RetStore"
+        android:layout_alignStart="@+id/RetStore"
+        android:hint="Email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -122,7 +101,36 @@
         android:id="@+id/RetPn"
         android:layout_below="@+id/RetEmail"
         android:layout_alignStart="@+id/RetEmail"
-        android:text="PhoneNumber" />
+        android:hint="PhoneNumber" />
+    <EditText
+        android:id="@+id/etGetAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter the Address."
+        android:layout_below="@+id/RetPn"
+        android:layout_alignStart="@+id/RetPn" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/etGetAddress"
+        android:layout_above="@+id/button4" />
+
+    <Button
+        android:id="@+id/bGetLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        android:layout_alignTop="@+id/etGetAddress"
+        android:onClick="getLocation"
+        android:layout_alignEnd="@+id/OnCheck"
+        android:layout_toEndOf="@+id/etGetAddress"
+        android:layout_alignBottom="@+id/etGetAddress"
+        android:layout_alignParentEnd="false" />
 
 </RelativeLayout>

@@ -12,6 +12,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_controller_material_dialog_b.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_controller_material_dialog_b.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
@@ -20,12 +24,20 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.0\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
@@ -60,6 +72,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_layout.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
@@ -76,12 +92,16 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.0\\res\\layout\\place_autocomplete_fragment.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -94,6 +114,10 @@
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.0\\res\\layout\\place_autocomplete_progress.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_modify.xml",
@@ -116,6 +140,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_media_route_chooser_dialog.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\layout\\mr_media_route_chooser_dialog.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -128,16 +156,20 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map_view.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\map_view.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_main1.xml",
@@ -146,6 +178,14 @@
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pad.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\activity_pad.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-places\\9.2.0\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
@@ -164,6 +204,10 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_mini_controller.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\layout\\cast_mini_controller.xml"
+    },
+    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
@@ -172,12 +216,12 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\sub_main.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_toolbar.xml"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -212,16 +256,24 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\guestmode.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\layout\\guestmode.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_intro_overlay.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\layout\\cast_intro_overlay.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_help_text.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\layout\\cast_help_text.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",

@@ -100,6 +100,7 @@ public class RBackgroundWorker extends AsyncTask<String,Void,String> {
             }
         }
         */
+        /*
         if(type.equals("check2")) {
             try {
                 String login_url = "http://175.126.112.137/employee/check2.php";
@@ -135,16 +136,17 @@ public class RBackgroundWorker extends AsyncTask<String,Void,String> {
                 e.printStackTrace();
             }
         }
-
+        */
         if(type.equals("register")) {
             String login_url = "http://175.126.112.137/employee/register.php";
             try {
                 String username =params[1];
                 String password = params[2];
                 String store = params[3];
-                String branch = params[4];
-                String email = params[5];
-                String hp = params[6];
+                String email = params[4];
+                String hp = params[5];
+                String latitude = params[6];
+                String longitude = params[7];
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -155,9 +157,10 @@ public class RBackgroundWorker extends AsyncTask<String,Void,String> {
                 String post_data = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(username,"UTF-8")+"&"
                         +URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(password,"UTF-8")+"&"
                         +URLEncoder.encode("store","UTF-8")+"="+URLEncoder.encode(store,"UTF-8")+"&"
-                        +URLEncoder.encode("branch","UTF-8")+"="+URLEncoder.encode(branch,"UTF-8")+"&"
                         +URLEncoder.encode("email","UTF-8")+"="+URLEncoder.encode(email,"UTF-8")+"&"
-                        +URLEncoder.encode("hp","UTF-8")+"="+URLEncoder.encode(hp,"UTF-8");
+                        +URLEncoder.encode("hp","UTF-8")+"="+URLEncoder.encode(hp,"UTF-8")+"&"
+                        +URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(latitude,"UTF-8")+"&"
+                        +URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(longitude,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

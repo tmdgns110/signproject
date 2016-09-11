@@ -1,51 +1,47 @@
 [
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_next.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_skip_next.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_play.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_mini_controller_play.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_rewind.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_clear_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_dark.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_light.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_disconnect.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_disconnect.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_check_white_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\ic_check_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_prev.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_skip_prev.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
@@ -56,28 +52,24 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\frontt.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\frontt.jpg"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\drawable\\design_snackbar_background.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_forward10.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
@@ -88,28 +80,244 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sign.bmp",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\sign.bmp"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_progress_drawable.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_mini_controller_progress_drawable.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_forward.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\panel.jpg",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\panel.jpg"
-    },
-    {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\feel.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\feel.jpg"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\min.PNG",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\min.PNG"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_gps_fixed_white_24dp.png",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\ic_gps_fixed_white_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_pause.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_pause.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_pause.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_mini_controller_pause.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\backk.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\backk.jpg"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_small_icon.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_small_icon.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_stop_live_stream.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_stop_live_stream.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check.PNG",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\check.PNG"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward30.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_forward30.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_play.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_play.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\front.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\front.jpg"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_upcoming_play.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_mini_controller_upcoming_play.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind10.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_rewind10.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_gradient_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_mini_controller_gradient_light.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_upcoming_stop.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_mini_controller_upcoming_stop.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\heyboard.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\heyboard.jpg"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sign.bmp",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\sign.bmp"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_mini_controller_stop.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\panel.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\panel.jpg"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.2.0\\res\\drawable\\cast_ic_notification_rewind30.xml"
+    },
+    {
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -132,31 +340,23 @@
         "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\pan.jpg"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_dialog_material_background.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_dark.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_dark.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_connecting.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\9.2.0\\res\\drawable\\cast_ic_notification_connecting.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_settings_light.xml",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_settings_light.xml"
     },
     {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\feel.jpg",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\feel.jpg"
-    },
-    {
-        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.jpg",
+        "source": "C:\\android\\signproject-master_ver.1.0\\Project_base_2\\app\\src\\main\\res\\drawable\\back.jpg"
     }
 ]

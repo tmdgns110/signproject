@@ -2,6 +2,7 @@ package kr.soen.project_base_2;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +17,9 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.media.ExifInterface;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -40,12 +44,16 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.content.SharedPreferences;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
+
+import net.daum.mf.map.api.MapView;
+
 
 class ManagerActivity{
 
@@ -84,6 +92,8 @@ class ManagerActivity{
 }
 
 
+
+
 public class MainActivity extends Activity implements OnClickListener {
 
     private ManagerActivity managerActivity = ManagerActivity.getInstance();
@@ -92,7 +102,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public static final String PACKAGE_NAME = "kr.soen.project_base_2";
     public static final String DATA_PATH = Environment
             .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
-    public static final String lang = "eng";
+    public static final String lang = "eng+kor";
 
     private static final String TAG = "mainActivity.java";
     protected EditText _field;
@@ -103,7 +113,9 @@ public class MainActivity extends Activity implements OnClickListener {
     AlertDialog inputstDialog;
     AlertDialog inputbrDialog;
 
-
+    LocationManager manager;
+    double Latitude;
+    double Longitude;
 
     protected static final String PHOTO_TAKEN = "photo_taken";
 
@@ -111,6 +123,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private ImageView mPhotoImageView;
     private ImageButton mButton;
     private ImageButton eButton;
+    private ImageButton pButton;
 //    뒤로 버튼 누를 때 창 뜨는
     private BackPressCloseHandler backPressCloseHandler;
 
@@ -122,7 +135,7 @@ public class MainActivity extends Activity implements OnClickListener {
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
             public void onPermissionGranted() {
-                Toast.makeText(MainActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -156,6 +169,15 @@ public class MainActivity extends Activity implements OnClickListener {
                 .setPermissionListener(permissionlistener)
                 .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.ACCESS_COARSE_LOCATION)
+                .check();
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setPermissions(Manifest.permission.ACCESS_FINE_LOCATION)
+                .check();
+
 
         String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/" };
 
@@ -219,15 +241,79 @@ public class MainActivity extends Activity implements OnClickListener {
 
         mButton = (ImageButton)findViewById(R.id.Photo);
         eButton = (ImageButton)findViewById(R.id.Exit);
+        pButton = (ImageButton)findViewById(R.id.Pad);
 
         mPhotoImageView = (ImageView)findViewById(R.id.image);
 
 
         mButton.setOnClickListener(this);
         eButton.setOnClickListener(this);
+        pButton.setOnClickListener(this);
 
         backPressCloseHandler = new BackPressCloseHandler(this);
     }
+
+    private void startLocationService() {
+
+        manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Location lastLocation = null;
+        GPSListener gpsListener = new GPSListener();
+        long minTime = 10000;
+        float minDistance = 0;
+
+        try {
+
+            manager.requestLocationUpdates(
+                    LocationManager.GPS_PROVIDER,
+                    minTime,
+                    minDistance,
+                    gpsListener);
+
+            lastLocation = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+
+            if(lastLocation != null){
+                double latitude = lastLocation.getLatitude();
+                double longitude = lastLocation.getLongitude();
+                Latitude = latitude;
+                Longitude = longitude;
+
+            }else{
+                Toast.makeText(getApplicationContext(),"GPS 서비스를 실행시켜주십시오.", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (SecurityException ex) {
+            ex.printStackTrace();
+        }
+
+
+    }
+
+    private class GPSListener implements LocationListener {
+
+        public void onLocationChanged(Location location) {
+
+            double latitude = location.getLatitude();
+            double longitude = location.getLongitude();
+
+            String msg = "" + latitude + "\n" + longitude;
+            Log.i("GPSListener", msg);
+
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
+        public void onProviderDisabled(String provider) {
+        }
+
+        public void onProviderEnabled(String provider) {
+        }
+
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+        }
+
+    }
+
+
+
 
 
     private void doTakePhotoAction()
@@ -321,11 +407,18 @@ public class MainActivity extends Activity implements OnClickListener {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         Bitmap bitmap = BitmapFactory.decodeFile(_path, options);
+        options.inScaled = true;
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+
             int iWidth = bitmap.getWidth();      //비트맵이미지의 넓이
             int iHeight = bitmap.getHeight();     //비트맵이미지의 높이
             int dstWidth = iWidth ;
             int dstHeight = iHeight ;
-            int maxResolution = 619;
+            int maxResolution = (int) Math.sqrt(width*height);
             float rate = 0.0f;
             //이미지의 가로 세로 비율에 맞게 조절
             if(iWidth > iHeight ){
@@ -413,13 +506,22 @@ public class MainActivity extends Activity implements OnClickListener {
         }
 
         recognizedText = recognizedText.trim();
+        startLocationService();
+
+        final String Lati = Double.toString(Latitude);
+        final String Longi = Double.toString(Longitude);
+
+        Toast.makeText(MainActivity.this, "" + "" + Lati + "\n" + Longi, Toast.LENGTH_LONG).show();
+
 
         if ( recognizedText.length() != 0 ) {
             _field.setText(_field.getText().toString().length() == 0 ? recognizedText : _field.getText() + " " + recognizedText);
             _field.setSelection(_field.getText().toString().length());
-            final String[] store = {_field.getText().toString()};
+            final String store = _field.getText().toString();
             final String type = "chkstore";
+            /*
             final String[] branch = new String[2];
+
 
 
                 alertDialog = new AlertDialog.Builder(this).create();
@@ -444,7 +546,7 @@ public class MainActivity extends Activity implements OnClickListener {
                                     public void run() {
                                         alertDialog.dismiss();
                                         SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(MainActivity.this);
-                                        sbackgroundWorker.execute(type, store[0], branch[0]);
+                                        sbackgroundWorker.execute(type, store[0], branch[0],Lati,Longi);
                                     }
                                 }, 2000);
 
@@ -480,7 +582,7 @@ public class MainActivity extends Activity implements OnClickListener {
                                 branch[1] = sbranch.getText().toString();
 
                                 SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(MainActivity.this);
-                                sbackgroundWorker.execute(type, store[0], branch[1]);
+                                sbackgroundWorker.execute(type, store[0], branch[1],Lati,Longi);
 
                             }
                         });
@@ -495,12 +597,11 @@ public class MainActivity extends Activity implements OnClickListener {
                     }
                 });
                 alertDialog.show();
+                */
 
-
-                //SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(this);
-                //sbackgroundWorker.execute(type, store);
+                SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(this);
+                sbackgroundWorker.execute(type, store,Lati,Longi);
             }
-
 
         // Cycle done.
     }
@@ -532,6 +633,23 @@ public class MainActivity extends Activity implements OnClickListener {
                     .show();
         }
 
+        if(v.getId()==R.id.Pad){
+                DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // Intent intent = new Intent(getApplicationContext(),SimpleAndroidOCRActivity.class);
+                        //  startActivity(intent);
+                    }
+                };
+
+                DialogInterface.OnClickListener cancelListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                };
+            }
         if(v.getId() == R.id.Exit){
             AlertDialog.Builder alert_confirm = new AlertDialog.Builder(MainActivity.this);
             alert_confirm.setMessage("프로그램을 종료 하시겠습니까?").setCancelable(false).setPositiveButton("확인",
@@ -581,7 +699,6 @@ public class MainActivity extends Activity implements OnClickListener {
         Intent intent = new Intent(this,ModifyActivity.class);
         startActivity(intent);
     }
-
 
 
     public class BackPressCloseHandler{
