@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "lib.php";
+include "../lib.php";
 
 $store = $_POST['store'];
 $latitude = $_POST['latitude'];
@@ -13,7 +13,6 @@ $storeList = getStoreList($latitude,$longitude);
 ############.............................. #######
 ############.............................. #######
 ##################################################
-
 
 listingStore($storeList);
 

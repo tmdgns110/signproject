@@ -10,13 +10,14 @@ $result = mysql_query($query,$conn);
 
 mysql_num_rows($result) or die("login not success");
 
-echo "login success !!!!! Welcome ".$username";
+echo "login success !!!!! Welcome ".$username." <br>";
 
 if($_SESSION['code']=='') {
 	$row = mysql_fetch_array($result);
-	$code = getCode($row['store'],$row['NS'],$row['EW']);
+	$code = getCode($row[2],$row[3]);
 	$_SESSION['code']=$code;
 }
 ?>
 
+<script>location.href = "mainforweb.php"</script>
 

@@ -5,35 +5,35 @@
 		GLOBAL $conn;
 		$query = "delete from menuList where menu like '$menu'";
 		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
+		echo "success to delete";
 	}
 
-	function updateMenu($menu, $price, $info, $newMenu, $newPrice, $newInfo)
+/*	function updateMenu($menu, $price, $info, $newMenu, $newPrice, $newInfo)
 	{
 		GLOBAL $conn;
 		$query = "update menuList set
 				menu = '$newMenu', price = $newPrice, info = '$newInfo', date = now()
 				where menu = '$menu' and price = $price and info = '$info'";
 		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
-	}
+	}*/
 
 	function addMenu($code, $menu, $price, $info=NULL)
 	{
 		GLOBAL $conn;
 		$query = "insert into menuList(menu,price,info,date,code) values('$menu',$price,'$info',now(),$code)";
 		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
+		echo "success to add";
 	}	
 
-	function getCode($store,$branch=NULL)
+	function getCode($store,$NS=NULL,$EW=NULL) // NULL is only debugging mode.
 	{
 		GLOBAL $conn;
 		$query = "select code from storeList where store like '$store'";
-		if($branch!=NULL) $query .= " and branch like '$branch'";
-
+		#################디버깅모드가아니면 if조건문은 무조건 수행되어야 함###
+		if($NS && $EW) $query .= " and NS like $NS and EW like $EW";
 		$result = mysql_query($query,$conn);
 
 		mysql_num_rows($result) or die("Empty data!<br>");
-		mysql_num_rows($result) or die("there is too many store more than one.<br>
-						please set teh name of the branch<br>");
 
 		$field = mysql_fetch_row($result);
 		$code = $field[0];
@@ -41,19 +41,26 @@
 		return $code;
 	}
 
-	function isNewestItem($date)
+	function getStoreList($NS,$EW)
 	{
-		$newestDate = date("Y-m-d", strtotime("-7 day"));
+		GLOBAL $conn;
+		$query = "select * from storeList";
+		$result = mysql_query($query,$conn);
+		$total_store = mysql_num_rows($result);
 
-		if($date>$newestDate) // the parameter named date are newer than newestData,
-			return true;
-		else false;
+		for($i=0;$i<$total_store;$i++)
+	        {
+       			mysqli_data_seek($result, $i);
+	                $row=mysql_fetch_array($result);
+
+			$distance = calDistance($NS,$EW,$row[NS],$row[EW]);
+			if($distance<5000)
+				$array[] = array("store"=>$row[store], "code"=>$row[code],
+						"NS"=>$row[NS], "EW"=>$row[EW]);
+		}
+		return $array;	
 	}
 
-	function postImg() 
-	{
-		print("<img src='../include/new.gif'>");
-	}
 
 	function listingMenu($code,$opt)
 	{
@@ -89,39 +96,49 @@
 			$result = mysql_query($query,$conn)
 				or die("$query<br>".mysql_errno().":".mysql_error());
 
-			if(!mysql_num_rows($result)) {
-			// it means that the menuList doens't exist about the code.
-			// so we must derive registering the menuList from the employee.
+			/* JSON PARSING _________________________________________________*/
 
-				print("<h3>Sorry, It is empty set.<br>");
-				print("You've to register the menu information about own's store.");
+			$total_record = mysql_num_rows($result);
+			echo "{\"Status\":\"OK\",\"num_results\":\"$total_record\",\"results\":[";
+			for($i=0;$i<$total_record;$i++)
+		        {
+        			mysqli_data_seek($result, $i);
+		                $row=mysql_fetch_array($result);
+		                echo
+		                "{\"menu\":\"$row[menu]\",\"price\":\"$row[price]\",\"info\":\"$row[info]\"}";
 
-				//등록옵션 구현
-				return false;
-			}
-				
-			else {
-			// listing the information about the menu that is placed to own's store
+		                if($i<$total_record-1) echo ",";
+      			}
 
-				print("<table width=500	border=1>");
-				print("<tr>
-					<h3><th><font color = magenta>MENU</font></th></h3>
-					<h3><th><font color = grey>PRICE</font></th></h3>
-					<h3><th><font color = grey>Info</font></th></h3>
-				       </tr>");	
+		        echo "]}";
+		
+		}
+	}
 
-				$col = 3; // 0번째인덱스 메뉴, 1번째인덱스 가격 2번째인덱스 info => 3index
-				while($row = mysql_fetch_row($result)) {
-					print("<tr>");
-					for($i=0; $i<$col; $i++) {
-						print("<td>".$row[$i]);
-						if($i==0 && isNewestItem($row[3])) postImg();
-						print("</td>");
-					}
-					print("</tr>");
-				}
-			}
-			print("</table>");
+	function listingStore($storeList)
+	{
+		GLOBAL $conn;
+		$count = sizeof($storeList);
+
+		if(!$count) {
+			print("Don't search");
+			return false;
+		}
+		else if($count==1) {
+			listingMenu($storeList[0][code],"dafault");
+		}
+		else {
+
+			echo "{\"Status\":\"OK\",\"num_results\":\"$count\",\"results\":[";
+			for($i=0;$i<$count;$i++)
+		        {
+		                echo
+		                "{\"store\":\"{$storeList[$i][store]}\"}";
+		                if($i<$total_record-1) echo ",";
+      			}
+
+		        echo "]}";
+		
 		}
 	}
 

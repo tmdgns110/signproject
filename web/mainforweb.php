@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../lib.php";
+include "../include/function2.php";
 $code = $_SESSION['code'];
 
 $add = $_POST['add'];
@@ -15,7 +16,7 @@ if($_POST['act_add']) {
 
 	addMenu($code,$menu,$price,$info);
 }
-/*
+
 else if($_POST['act_update']) {
 	$menu = $_POST['menu'];
 	$price = $_POST['price'];
@@ -26,21 +27,24 @@ else if($_POST['act_update']) {
 
 	updateMenu($menu,$price,$info,$newMenu,$newPrice,$newInfo);
 }
-*/
+
 else if($_POST['act_delete']) {
 	$menu = $_POST['menu'];
 
 	deleteMenu($menu);
 }
 
+print("<hr>");
 
 //__________________________________function to add, update and delete______________________________
-listingMenu($code,"default");
+listingMenuforweb($code,"default");
 
-/*
+print("<hr>");
+
+
 if( !($add or $delete or $update) ) { // It is the case that employee don't click anything.
 	print("
-		<form method='POST' action='main.php'>
+		<form method='POST' action='mainforweb.php'>
 		<table>
 		<tr>
 		   <td><input type='submit' name='add' value='add'></td>
@@ -55,7 +59,7 @@ if( !($add or $delete or $update) ) { // It is the case that employee don't clic
 else {
 	if($add) {
 		print("
-			<form method='POST' action='main.php'>
+			<form method='POST' action='mainforweb.php'>
 			<table>
 			<tr>
 			   <p><td>Menu </td><td><input type='text' name='menu'></td>
@@ -72,7 +76,7 @@ else {
 
 	else if($update) {
 		print("
-			<form method='POST' action='main.php'>
+			<form method='POST' action='mainforweb.php'>
 			<table>
 			<tr>
 			   <p><td>Insert</td><td> your menu information that have just placed.</td>
@@ -104,7 +108,7 @@ else {
 
 	else {
 		print("
-			<form method='POST' action='main.php'>
+			<form method='POST' action='mainforweb.php'>
 			<table>
 			<tr>
 			   <p><td>Menu </td><td><input type='text' name='menu'></td>
@@ -113,7 +117,7 @@ else {
 			<input type='submit' name='act_delete' value='delete the menu' style='width:222;'>");
 	}
 
-}*/
+}
 
 
 	
