@@ -1,6 +1,7 @@
 package kr.soen.project_base_2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
@@ -144,6 +145,12 @@ public class RegisterActivity extends AppCompatActivity {
                 double lon = addr.getLongitude();
                 Lat = Double.toString(lat);
                 Lon = Double.toString(lon);
+
+
+                Intent intent = new Intent(this,MapsActivity.class);
+                intent.putExtra("Lat",lat);
+                intent.putExtra("Lon",lat);
+                startActivity(intent);
             }
         }
 

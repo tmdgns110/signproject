@@ -8,6 +8,13 @@
     tools:context="kr.soen.project_base_2.GuestActivity">
 
     <LinearLayout
+        android:id="@+id/Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +35,6 @@
             android:scrollbars = "vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="New Text"
             android:id="@+id/LIST1"
             android:layout_below="@+id/SV1"
             android:layout_alignParentStart="true"
@@ -41,6 +47,7 @@
             android:id="@+id/field" />
 
     </LinearLayout>
+
 
     <TableRow
         android:layout_width="match_parent"

@@ -24,15 +24,15 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:design:24.0.0'
     // compile 'com.google.android.gms:play-services:8.4.0'
     // compile 'com.rmtheis:tess-two:6.0.3'
     compile project(':tess-two')
     // compile 'com.github.ParkSangGwon:TedPermission:v1.0.12'
     compile project(':tedpermission')
-    compile 'com.android.support:support-annotations:24.0.0'
     //compile files('C:/android/signproject-master_ver.1.0/Project_base_2/app/libs/libDaumMapAndroid.jar')
     //compile files('C:/android/signproject-master_ver.1.0/Project_base_2/app/libs/libDaumMapEngineApi.jar')
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:support-annotations:24.0.0'
     compile 'com.google.android.gms:play-services:9.2.0'
 }

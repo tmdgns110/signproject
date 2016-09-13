@@ -32,10 +32,6 @@ import java.util.Objects;
 public class SBackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
-    AlertDialog inputDialog;
-    String rstore;
-    String type = "yes";
-    EditText sstore;
 
     SBackgroundWorker(Context ctx) {
         context = ctx;
@@ -44,11 +40,11 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... params) {
         String type = params[0];
         String store = params[1];
-        String latitude = params[2];
-        String longitude = params[3];
-        rstore = store;
+
         if (type.equals("chkstore")) {
             String login_url = "http://175.126.112.137/search.php";
+            String latitude = params[2];
+            String longitude = params[3];
             try {
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -60,6 +56,38 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
                 String post_data = URLEncoder.encode("store", "UTF-8") + "=" + URLEncoder.encode(store, "UTF-8")+"&"
                         + URLEncoder.encode("latitude", "UTF-8") + "=" + URLEncoder.encode(latitude, "UTF-8")+"&"
                         + URLEncoder.encode("longitude", "UTF-8") + "=" + URLEncoder.encode(longitude, "UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result = "";
+                String line = "";
+                while ((line = bufferedReader.readLine()) != null) {
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+       else if (type.equals("recheck")) {
+            String login_url = "http://175.126.112.137/search.php";
+            try {
+                URL url = new URL(login_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("store", "UTF-8") + "=" + URLEncoder.encode(store, "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -93,8 +121,6 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
 
    protected void onPostExecute(String result) {
 
-        alertDialog.setMessage(result);
-        alertDialog.show();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable(){
             public void run(){
@@ -102,7 +128,7 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
                 Intent intent = new Intent(context, GuestActivity.class);
                 context.startActivity(intent);
             }
-           }, 2000);
+           }, 1000);
 /*
         if(Objects.equals(type, "yes")) {
             alertDialog.setMessage("you want this  " + rstore + "  right?");
@@ -163,9 +189,6 @@ public class SBackgroundWorker extends AsyncTask<String,Void,String> {
 
         */
     }
-
-
-
 
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);

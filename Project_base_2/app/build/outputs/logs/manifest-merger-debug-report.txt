@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:2:1-86:12
 	package
 		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
@@ -14,8 +14,24 @@ ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\And
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:5:5-6:40
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:multidex:1.0.1] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
+MERGED from [Project_base_2:tess-two:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\Project_base_2\tess-two\unspecified\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.github.ParkSangGwon:tedpermission:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\unspecified\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
@@ -27,22 +43,6 @@ MERGED from [com.android.support:design:24.0.0] C:\android\signproject-master_ve
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:recyclerview-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [Project_base_2:tess-two:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\Project_base_2\tess-two\unspecified\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.github.ParkSangGwon:tedpermission:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\unspecified\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
@@ -858,39 +858,39 @@ MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-maste
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:6:9-38
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:7:9-38
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:5:15-41
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:6:9-35
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.CAMERA
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:7:5-65
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:9:5-65
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:7:22-62
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:9:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:10:22-78
 uses-permission#android.permission.FLASHLIGHT
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:9:5-68
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:11:5-69
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:9:22-66
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:11:22-66
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:11:5-71
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:11:22-68
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:13:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:12:5-71
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:14:5-71
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:12:22-68
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:14:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:13:5-72
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:15:5-72
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:13:22-69
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:15:22-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:14:5-67
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:16:5-67
 MERGED from [com.google.android.gms:play-services-ads-lite:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.2.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-ads-lite:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.2.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.2.0\AndroidManifest.xml:21:5-67
@@ -927,29 +927,52 @@ MERGED from [com.google.firebase:firebase-analytics-impl:9.2.0] C:\android\signp
 MERGED from [com.google.firebase:firebase-iid:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.2.0\AndroidManifest.xml:21:5-67
 MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.2.0\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:14:22-64
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:16:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:15:5-79
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:15:22-76
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:16:5-81
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:18:5-81
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:18:22-78
 uses-feature#android.hardware.camera
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:18:5-84
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:20:5-22:36
 	android:required
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:18:58-82
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:22:9-33
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:18:19-57
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:21:9-47
 uses-feature#android.hardware.camera.autofocus
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:19:5-94
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:23:5-25:36
 	android:required
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:19:68-92
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:25:9-33
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:19:19-67
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:24:9-57
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:27:5-83
+	android:name
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:27:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:28:5-88
+	android:name
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:28:30-85
 application
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:21:5-55:19
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:30:5-84:19
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.github.ParkSangGwon:tedpermission:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\unspecified\AndroidManifest.xml:9:5-13:19
+MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
@@ -960,21 +983,6 @@ MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-maste
 MERGED from [com.android.support:design:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\design\24.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
-MERGED from [com.github.ParkSangGwon:tedpermission:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\unspecified\AndroidManifest.xml:9:5-13:19
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
@@ -1773,69 +1781,69 @@ MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-maste
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:24.0.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:24:9-41
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:33:9-41
 	android:supportsRtl
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:25:9-35
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:34:9-35
 	android:allowBackup
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:31:9-35
 	android:icon
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:23:9-43
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:32:9-43
 	android:theme
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:26:9-40
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:35:9-40
 uses-library#com.google.android.maps
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:27:9-63
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:36:9-64
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:27:23-61
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:36:23-61
 activity#kr.soen.project_base_2.MainActivity
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:28:9-38:20
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:38:9-49:20
 	android:screenOrientation
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:31:13-49
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:41:13-49
 	android:configChanges
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:30:13-63
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:40:13-63
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:29:13-41
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:39:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:34:13-37:29
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:47:27-74
 activity#kr.soen.project_base_2.LoginActivity
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:39:9-46:20
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:50:9-57:20
 	android:label
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:41:13-57
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:52:13-57
 	android:parentActivityName
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:42:13-55
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:53:13-55
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:40:13-42
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:51:13-42
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:43:13-45:71
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:54:13-56:71
 	android:value
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:45:17-68
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:56:17-68
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:44:17-63
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:55:17-63
 activity#kr.soen.project_base_2.RegisterActivity
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:47:9-63
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:58:9-54
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:47:19-51
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:58:19-51
 activity#kr.soen.project_base_2.ModifyActivity
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:48:9-61
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:59:9-52
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:48:19-49
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:59:19-49
 activity#kr.soen.project_base_2.GuestActivity
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:49:9-60
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:60:9-51
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:49:19-48
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:60:19-48
 activity#kr.soen.project_base_2.Map
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:50:9-50
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:61:9-41
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:50:19-38
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:61:19-38
 meta-data#com.google.android.gms.version
-ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:52:9-54:69
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:66:9-68:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:21:9-23:69
@@ -2100,9 +2108,21 @@ MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\sig
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:54:13-66
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:68:13-66
 	android:name
-		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:53:13-58
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:67:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:77:9-79:55
+	android:value
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:79:13-52
+	android:name
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:78:13-58
+activity#kr.soen.project_base_2.MapsActivity
+ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:81:9-83:68
+	android:label
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:83:13-56
+	android:name
+		ADDED from C:\android\signproject-master_ver.1.0\Project_base_2\app\src\main\AndroidManifest.xml:82:13-41
 activity#com.gun0912.tedpermission.TedPermissionActivity
 ADDED from [com.github.ParkSangGwon:tedpermission:unspecified] C:\android\signproject-master_ver.1.0\Project_base_2\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\unspecified\AndroidManifest.xml:10:9-12:56
 	android:theme

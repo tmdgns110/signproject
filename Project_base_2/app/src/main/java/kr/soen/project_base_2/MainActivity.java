@@ -299,7 +299,7 @@ public class MainActivity extends Activity implements OnClickListener {
             String msg = "" + latitude + "\n" + longitude;
             Log.i("GPSListener", msg);
 
-            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
         public void onProviderDisabled(String provider) {
         }
@@ -511,7 +511,7 @@ public class MainActivity extends Activity implements OnClickListener {
         final String Lati = Double.toString(Latitude);
         final String Longi = Double.toString(Longitude);
 
-        Toast.makeText(MainActivity.this, "" + "" + Lati + "\n" + Longi, Toast.LENGTH_LONG).show();
+       // Toast.makeText(MainActivity.this, "" + "" + Lati + "\n" + Longi, Toast.LENGTH_LONG).show();
 
 
         if ( recognizedText.length() != 0 ) {

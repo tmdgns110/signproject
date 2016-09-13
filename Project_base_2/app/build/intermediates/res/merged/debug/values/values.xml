@@ -479,6 +479,9 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        9D:5A:38:B4:DE:A8:2D:C9:D5:3D:79:17:FB:87:2B:3F:97:83:9B:82;kr.soen.project_base_2
+    </string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>
@@ -507,6 +510,7 @@
     <string name="tedpermission_confirm">Confirm</string>
     <string name="tedpermission_setting">Setting</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_maps">Map</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
