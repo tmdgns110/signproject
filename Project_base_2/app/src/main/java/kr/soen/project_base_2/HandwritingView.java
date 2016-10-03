@@ -52,7 +52,7 @@ public class HandwritingView extends View {
     private static final boolean DITHER_FLAG = true;
 
     private int mCertainColor = 0xFF000000;
-    private float mStrokeWidth = 2.0f;
+    private float mStrokeWidth = 10.0f;
 
 
     public HandwritingView(Context context, AttributeSet attrs) {

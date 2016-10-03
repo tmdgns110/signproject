@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -19,13 +17,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+
 /**
  * Created by 김승훈 on 2016-07-25.
  */
 public class MBackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
     AlertDialog alertDialog;
-
+    String stype;
 
     MBackgroundWorker(Context ctx) {
         context = ctx;
@@ -33,13 +32,14 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
+        stype=type;
 
-        if (type.equals("add") || type.equals("del")) {
             String login_url = "http://175.126.112.137/employee/main.php";
             try {
-                String menu = params[1];
-                String price = params[2];
-                String info = params[3];
+                String ID = params[1];
+                String menu = params[2];
+                String price = params[3];
+                String info = params[4];
 
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -48,7 +48,8 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(type, "UTF-8")+"&"
+                    String post_data = URLEncoder.encode("type", "UTF-8") + "=" + URLEncoder.encode(type, "UTF-8") + "&"
+                        + URLEncoder.encode("ID", "UTF-8") + "=" + URLEncoder.encode(ID, "UTF-8")+"&"
                         + URLEncoder.encode("menu", "UTF-8") + "=" + URLEncoder.encode(menu, "UTF-8")+"&"
                         +URLEncoder.encode("price","UTF-8")+"="+URLEncoder.encode(price,"UTF-8")+"&"
                         +URLEncoder.encode("info","UTF-8")+"="+URLEncoder.encode(info,"UTF-8");
@@ -72,7 +73,7 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+
 
         return null;
     }
@@ -80,13 +81,13 @@ public class MBackgroundWorker extends AsyncTask<String,Void,String> {
 
 
     protected void onPreExecute() {
-        alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Modify Status");
+
+            alertDialog = new AlertDialog.Builder(context).create();
+            alertDialog.setTitle("Modify Status");
+
     }
 
     protected void onPostExecute(String result) {
-            alertDialog.setMessage(result);
-            alertDialog.show();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable(){
                                 public void run(){

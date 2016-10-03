@@ -24,9 +24,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Objects;
 
 /**
@@ -69,19 +73,34 @@ public class GuestActivity extends AppCompatActivity {
         gPHP1.execute(url);
     }
 
-
     class GettingPHP1 extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... params) {
             StringBuilder jsonHtml = new StringBuilder();
+            Intent intent = getIntent();
+             String store = intent.getStringExtra("store");
+             String Lat= intent.getStringExtra("Lat");
+             String Lon = intent.getStringExtra("Lon");
             try {
                 URL phpUrl = new URL(params[0]);
-                HttpURLConnection conn = (HttpURLConnection) phpUrl.openConnection();
-                if (conn != null) {
-                    conn.setConnectTimeout(10000);
-                    conn.setUseCaches(false);
-                    if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+                HttpURLConnection httpURLConnection = (HttpURLConnection) phpUrl.openConnection();
+                if (httpURLConnection != null) {
+                    httpURLConnection.setConnectTimeout(10000);
+                    httpURLConnection.setUseCaches(false);
+                    httpURLConnection.setRequestMethod("POST");
+                    httpURLConnection.setDoOutput(true);
+                    httpURLConnection.setDoInput(true);
+                    OutputStream outputStream = httpURLConnection.getOutputStream();
+                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                    String post_data = URLEncoder.encode("store", "UTF-8") + "=" + URLEncoder.encode(store, "UTF-8")+"&"
+                            + URLEncoder.encode("latitude", "UTF-8") + "=" + URLEncoder.encode(Lat, "UTF-8")+"&"
+                            + URLEncoder.encode("longitude", "UTF-8") + "=" + URLEncoder.encode(Lon, "UTF-8");
+                    bufferedWriter.write(post_data);
+                    bufferedWriter.flush();
+                    bufferedWriter.close();
+                    outputStream.close();
+                    if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                        BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "UTF-8"));
                         while (true) {
                             String line = br.readLine();
                             if (line == null)
@@ -90,7 +109,7 @@ public class GuestActivity extends AppCompatActivity {
                         }
                         br.close();
                     }
-                    conn.disconnect();
+                    httpURLConnection.disconnect();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -104,96 +123,22 @@ public class GuestActivity extends AppCompatActivity {
                 JSONObject jObject = new JSONObject(str);
                 // results라는 key는 JSON배열로 되어있다.
                 JSONArray results = jObject.getJSONArray("results");
-                int check = jObject.getInt("Status");
                 String list = "";
-                list += "Status : " + jObject.get("Status");
-                list += "\n";
-                list += "Number of results : " + jObject.get("num_results");
-                list += "\n";
-                list += "results : \n";
-
-                if(check==100) {
                     for (int i = 0; i < results.length(); ++i) {
                         JSONObject temp = results.getJSONObject(i);
-                        list += "\t" + temp.get("store");
-                    }
-                    tv1.setText(list);
-                }
-                else if(check==200)
-                {
-                    for (int i = 0; i < results.length(); ++i) {
-                        JSONObject temp = results.getJSONObject(i);
-                        list += "\tMenu : " + temp.get("menu");
-                        list += "\tPrice : " + temp.get("price");
-                        list += "\tInfo : " + temp.get("info");
+                        list += "\n\t--------------------------------------------\n";
+                        list += "\tMenu : " + temp.get("menu") + "\n";
+                        list += "\tPrice : " + temp.get("price") + "\n";
+                        list += "\tInfo : " + temp.get("info") + "\n";
                         list += "\n\t--------------------------------------------\n";
                     }
                     tv1.setText(list);
-                }
-                else if(check==300) {
-                    dynamicLayout = (LinearLayout)findViewById(R.id.Layout);
-                    for (int i = 0; i < results.length(); ++i) {
-                        JSONObject temp = results.getJSONObject(i);
-                        list += "\tstore : " + temp.get("store");
-                        list += "\n\t--------------------------------------------\n";
-                        pushButton(temp.getString("store"));
-                        /*
-                        LinearLayout item = new LinearLayout(mContext);
-                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                        item.setLayoutParams(params);
-                        item.setOrientation(LinearLayout.HORIZONTAL);
 
-                        store = temp.getString("store");
-                        TextView tv = new TextView(mContext);
-                        tv.setLayoutParams(params);
-                        tv.setText(temp.getString("store"));
-                        item.addView(tv);
-                        item.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                String type = "recheck";
-                                //Toast.makeText(GuestActivity.this, "" + "" + store + "\n", Toast.LENGTH_LONG).show();
-                                SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(GuestActivity.this);
-                                sbackgroundWorker.execute(type, store);
-                            }
-                        });
-                        layout.addView(item);
-                        /*
-                        layout.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-
-                            }
-                        });
-                   */
-                    }
-                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
     }
-
-    private void pushButton(String str) {
-        num++;
-        final Button dynamicButton = new Button(this);
-        dynamicButton.setId(num);
-        dynamicButton.setText(str);
-        dynamicButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String type = "recheck";
-                Toast.makeText(GuestActivity.this, "" + "" + dynamicButton.getText(), Toast.LENGTH_LONG).show();
-                SBackgroundWorker sbackgroundWorker = new SBackgroundWorker(GuestActivity.this);
-                sbackgroundWorker.execute(type, String.valueOf(dynamicButton.getText()));
-            }
-        });
-        dynamicLayout.addView(dynamicButton,new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-
-
-    }
-
     public boolean onKeyDown(int KeyCode, KeyEvent event) {
 
         if (KeyCode == KeyEvent.KEYCODE_BACK) {

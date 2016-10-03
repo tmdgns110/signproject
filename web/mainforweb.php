@@ -3,7 +3,6 @@ session_start();
 include "../lib.php";
 include "../include/function2.php";
 $code = $_SESSION['code'];
-
 $add = $_POST['add'];
 $delete = $_POST['delete'];
 $update = $_POST['update'];

@@ -24,8 +24,8 @@
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -58,7 +58,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ModifyActivity" />
         <activity android:name=".GuestActivity" />
-        <activity android:name=".Map" />
+        <activity android:name=".PadActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -76,7 +76,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyBi4e-G-AlaibC8JANKy6rS6SNVWqMdIdM" />
 
         <activity
             android:name=".MapsActivity"

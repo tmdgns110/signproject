@@ -5,31 +5,19 @@
 		GLOBAL $conn;
 		$query = "delete from menuList where menu like '$menu'";
 		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
-		echo "success to delete";
 	}
-
-/*	function updateMenu($menu, $price, $info, $newMenu, $newPrice, $newInfo)
-	{
-		GLOBAL $conn;
-		$query = "update menuList set
-				menu = '$newMenu', price = $newPrice, info = '$newInfo', date = now()
-				where menu = '$menu' and price = $price and info = '$info'";
-		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
-	}*/
 
 	function addMenu($code, $menu, $price, $info=NULL)
 	{
 		GLOBAL $conn;
 		$query = "insert into menuList(menu,price,info,date,code) values('$menu',$price,'$info',now(),$code)";
 		$result = mysql_query($query,$conn) or die(mysql_errno().":".mysql_error()."<br>");
-		echo "success to add";
 	}	
 
 	function getCode($store,$NS=NULL,$EW=NULL) // NULL is only debugging mode.
 	{
 		GLOBAL $conn;
 		$query = "select code from storeList where store like '$store'";
-		#################디버깅모드가아니면 if조건문은 무조건 수행되어야 함###
 		if($NS && $EW) $query .= " and NS like $NS and EW like $EW";
 		$result = mysql_query($query,$conn);
 
@@ -54,13 +42,44 @@
 	                $row=mysql_fetch_array($result);
 
 			$distance = calDistance($NS,$EW,$row[NS],$row[EW]);
-			if($distance<5000)
+				if($distance<5000) // less than 500m
 				$array[] = array("store"=>$row[store], "code"=>$row[code],
 						"NS"=>$row[NS], "EW"=>$row[EW]);
 		}
 		return $array;	
 	}
 
+	function scoring($name, $array)
+	{
+		$origin_name = trim($name);
+		$n = strlen($name);
+		
+		$count = sizeof($array);
+		$score[$count];
+		for($i=0;$i<$count;$i++) {
+			$score[$i]=0;
+			$cmp_name = $array[$i]['store'];
+			$m = strlen($cmp_name);
+
+			for($j=1;$j<=$n&&$j<=$m;$j++) {
+				for($k=0;$k<=$n-$j;$k++) {
+					$temp = substr($origin_name,$k,$j);
+					if(strstr($cmp_name,$temp)) $score[$i] += $j;
+					else $score[$i] -= 1;
+				}
+			}
+		}
+		$MaxScore = $score[0];
+		$pos = 0;
+		for($l=1;$l<$count;$l++) {
+			if($MaxScore < $score[$l]) {
+				$MaxScore = $score[$l];
+				$pos = $l;
+			}
+		}
+		$store = array(0=>$array[$pos]);
+		return $store;
+	}
 
 	function listingMenu($code,$opt)
 	{
@@ -99,7 +118,7 @@
 			/* JSON PARSING _________________________________________________*/
 
 			$total_record = mysql_num_rows($result);
-			echo "{\"Status\":\"OK\",\"num_results\":\"$total_record\",\"results\":[";
+			echo "{\"Status\":\"200\",\"num_results\":\"$total_record\",\"results\":[";
 			for($i=0;$i<$total_record;$i++)
 		        {
         			mysqli_data_seek($result, $i);
@@ -120,25 +139,18 @@
 		GLOBAL $conn;
 		$count = sizeof($storeList);
 
-		if(!$count) {
-			print("Don't search");
-			return false;
-		}
-		else if($count==1) {
-			listingMenu($storeList[0][code],"dafault");
+		if($count==1) {
+			listingMenu($storeList[0]['code'],"dafault");
 		}
 		else {
-
-			echo "{\"Status\":\"OK\",\"num_results\":\"$count\",\"results\":[";
-			for($i=0;$i<$count;$i++)
-		        {
-		                echo
-		                "{\"store\":\"{$storeList[$i][store]}\"}";
-		                if($i<$total_record-1) echo ",";
+			$code = !$count ? 100 : 300;
+			echo "{\"Status\":\"$code\",\"num_results\":\"$count\",\"results\":[";
+			if(!$count) echo "{\"store\":\"don't search\"}";
+			else for($i=0;$i<$count;$i++) {
+		                echo "{\"store\":\"{$storeList[$i][store]}\"}";
+		                if($i<$count-1) echo ",";
       			}
-
 		        echo "]}";
-		
 		}
 	}
 

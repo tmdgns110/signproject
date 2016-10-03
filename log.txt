@@ -1,0 +1,2 @@
+store:HO		latitude:37570305.78		longitude:126986885.91
+store:		latitude:0		longitude:0

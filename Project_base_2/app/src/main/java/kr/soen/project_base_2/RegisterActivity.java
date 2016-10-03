@@ -1,5 +1,6 @@
 package kr.soen.project_base_2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,8 +59,6 @@ public class RegisterActivity extends AppCompatActivity {
         RStoreEt = (EditText) findViewById(R.id.RetStore);
         REmailEt = (EditText) findViewById(R.id.RetEmail);
         RPnEt = (EditText) findViewById(R.id.RetPn);
-        //RLatiEt = (EditText) findViewById(R.id.RetLati);
-       // RLongiEt = (EditText) findViewById(R.id.RetLongi);
         RGetAddress = (EditText) findViewById(R.id.etGetAddress);
 
 
@@ -92,36 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-/*
-    public Location findGeoPoint(String address) {
-        Location loc = new Location("");
-        Geocoder coder = new Geocoder(this);
-        List<Address> addr = null;// 한좌표에 대해 두개이상의 이름이 존재할수있기에 주소배열을 리턴받기 위해 설정
 
-        try {
-            addr = coder.getFromLocationName(address, 5);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }// 몇개 까지의 주소를 원하는지 지정 1~5개 정도가 적당
-        if (addr != null) {
-            for (int i = 0; i < addr.size(); i++) {
-                Address lating = addr.get(i);
-                double lat = lating.getLatitude(); // 위도가져오기
-                double lon = lating.getLongitude(); // 경도가져오기
 
-                loc.setLatitude(lat);
-                loc.setLongitude(lon);
-                Lat = Double.toString(lat);
-                Lon = Double.toString(lon);
-                Toast.makeText(RegisterActivity.this, "" + "" + Lat + "\n" + Lat, Toast.LENGTH_LONG).show();
-
-            }
-        }
-        return loc;
-    }
-
-*/
     public void getLocation(View view) {
         final TextView tv = (TextView) findViewById(R.id.textView);
         final Geocoder geocoder = new Geocoder(this);
@@ -139,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (list.size()==0) {
                 tv.setText("해당되는 주소 정보는 없습니다");
             } else {
-                tv.setText(list.get(0).toString());
+                tv.setText(list.get(0).getAddressLine(0).toString());
                 Address addr = list.get(0);
                 double lat = addr.getLatitude();
                 double lon = addr.getLongitude();
@@ -149,11 +121,26 @@ public class RegisterActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(this,MapsActivity.class);
                 intent.putExtra("Lat",lat);
-                intent.putExtra("Lon",lat);
-                startActivity(intent);
+                intent.putExtra("Lon",lon);
+                startActivityForResult(intent,0);
+
             }
         }
 
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+        TextView tv = (TextView) findViewById(R.id.textView);
+
+        Lat = data.getStringExtra("Lat");
+        Lon = data.getStringExtra("Lon");
+        String address = data.getStringExtra("address");
+        tv.setText(address);
 
     }
 
@@ -177,40 +164,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    /*
-        public void CStore(View view) {
-            String store = RStoreEt.getText().toString();
-            String type = "check1";
-            if(store.length()!=0) {
-                RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
-                rbackgroundWorker.execute(type, store);
-            }
-            else{
-                Toast.makeText(RegisterActivity.this,"가게명을 입력하세요", Toast.LENGTH_SHORT).show();
-                RStoreEt.requestFocus();
-                return;
-
-            }
-
-        }
-        */
-    /*
-    public void CBranch(View view) {
-        String store = RStoreEt.getText().toString();
-        String branch = RBranchEt.getText().toString();
-        String type = "check2";
-        if ((store.length() != 0) && (branch.length() != 0) && (store != "STORE") && (branch != "BRANCH")) {
-            RBackgroundWorker rbackgroundWorker = new RBackgroundWorker(this);
-            rbackgroundWorker.execute(type, store, branch);
-        } else {
-            Toast.makeText(RegisterActivity.this, "점포명을 입력하세요", Toast.LENGTH_SHORT).show();
-            RBranchEt.requestFocus();
-            return;
-
-        }
-    }*/
 
     public void REGISTER(View view) {
+
+
         if ((RUsernameEt.getText().toString().length() == 0) && (RUsernameEt.getText().toString() != "ID")) {
             Toast.makeText(RegisterActivity.this, "ID을 입력하세요", Toast.LENGTH_SHORT).show();
             RUsernameEt.requestFocus();
@@ -242,13 +199,7 @@ public class RegisterActivity extends AppCompatActivity {
             RStoreEt.requestFocus();
             return;
         }
-        /*
-        if ((RBranchEt.getText().toString().length() == 0) && (RBranchEt.getText().toString() != "BRANCH")) {
-            Toast.makeText(RegisterActivity.this, "지점을 입력하세요", Toast.LENGTH_SHORT).show();
-            RBranchEt.requestFocus();
-            return;
-        }
-        */
+
         if ((REmailEt.getText().toString().length() == 0) && (REmailEt.getText().toString() != "Email")) {
             Toast.makeText(RegisterActivity.this, "이메일을 입력하세요", Toast.LENGTH_SHORT).show();
             REmailEt.requestFocus();
@@ -335,4 +286,17 @@ public class RegisterActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
+    public boolean onKeyDown(int KeyCode, KeyEvent event){
+
+        if(KeyCode == KeyEvent.KEYCODE_BACK)
+        {
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
+        }
+
+        return false;
+    }
+
 }
+

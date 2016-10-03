@@ -101,7 +101,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             SharedPreferences mPref = context.getSharedPreferences("mPref",context.MODE_PRIVATE);
             SharedPreferences.Editor editor = mPref.edit();
             editor.putString("maintainid",loginid);
-           editor.putString("maintainpw",loginpw);
+            editor.putString("maintainpw",loginpw);
             editor.commit();
 
             Handler handler = new Handler();
@@ -109,6 +109,8 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
                 public void run(){
                     alertDialog.dismiss();
                     Intent intent = new Intent(context, ModifyActivity.class);
+                    Boolean check = false;
+                    intent.putExtra("check",check);
                     context.startActivity(intent);
                 }
             }, 2000);

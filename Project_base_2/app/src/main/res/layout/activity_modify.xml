@@ -47,7 +47,7 @@
         android:layout_above="@+id/btnAdd"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp"
-        android:text="MENU" />
+        android:hint="MENU" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_alignTop="@+id/etMenu"
         android:layout_alignParentStart="true"
         android:layout_marginTop="33dp"
-        android:text="PRICE" />
+        android:hint="PRICE" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
         android:id="@+id/etInfo"
         android:layout_above="@+id/btnAdd"
         android:layout_alignParentStart="true"
-        android:text="INFO" />
+        android:hint="INFO" />
 
 
     <ScrollView
